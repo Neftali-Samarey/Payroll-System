@@ -20,9 +20,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
         title = "Login"
         showKeyboard()
         createUsers()
+        self.view.addGestureRecognizer(tap)
         
     }
 
@@ -67,13 +69,31 @@ class ViewController: UIViewController {
         
         // Iterate through the array (database) of users to find the users
         for users in sampleUsers {
-            if name != users.name && password != users.password {
-                print("No user found")
+            if name != users.name || password != users.password {
+                UIView.animate(withDuration: 3, animations: {
+                    // 1
+                    self.usernameField.layer.borderColor = UIColor.red.cgColor
+                    self.usernameField.layer.borderWidth = 3
+                    print("executed")
+                }) { (true) in
+                    // 2
+                
+                  
+                }
             } else {
                 print("Found User")
             }
         }
       
+    }
+    
+    // 
+    @objc func dismissKeyboard() {
+        self.usernameField.resignFirstResponder()
+        UIView.animate(withDuration: 0.3) {
+            self.containerYConstraint.constant = -50
+            self.view.layoutIfNeeded()
+        }
     }
   
 
