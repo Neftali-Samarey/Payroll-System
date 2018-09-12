@@ -14,11 +14,13 @@ class User {
     var name : String!
     var lastName: String!
     var isAdmin : Bool!
+    var password: String!
     
-    init(name: String, lastname: String, admin: Bool) {
+    init(name: String, lastname: String, admin: Bool, password: String) {
         self.name = name
         self.lastName = lastname
         self.isAdmin = admin
+        self.password = password
     }
     
 }
