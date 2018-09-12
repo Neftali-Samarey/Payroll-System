@@ -9,7 +9,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var containerYConstraint: NSLayoutConstraint!
     @IBOutlet weak var usernameField: UITextField!
@@ -22,7 +22,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
         title = "Login"
-        showKeyboard()
+        self.usernameField.delegate = self
+        self.passwordField.delegate = self
+        //showKeyboard() // will fix this later
         createUsers()
         self.view.addGestureRecognizer(tap)
         
@@ -50,8 +52,9 @@ class ViewController: UIViewController {
     
     func showKeyboard() {
         UIView.animate(withDuration: 0.3) {
-             self.containerYConstraint.constant = -100
-             self.usernameField.becomeFirstResponder()
+            self.usernameField.becomeFirstResponder()
+            self.containerYConstraint.constant = -100
+            
         }
         
         
@@ -87,9 +90,22 @@ class ViewController: UIViewController {
       
     }
     
-    // 
+    
+    //MARK: - TEXTFIELD DELEGATES
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField.becomeFirstResponder() {
+            UIView.animate(withDuration: 0.3) {
+                self.containerYConstraint.constant = -100
+                self.view.layoutIfNeeded()
+            }
+        }
+    }
+    
+    //
     @objc func dismissKeyboard() {
         self.usernameField.resignFirstResponder()
+        self.passwordField.resignFirstResponder()
         UIView.animate(withDuration: 0.3) {
             self.containerYConstraint.constant = -50
             self.view.layoutIfNeeded()

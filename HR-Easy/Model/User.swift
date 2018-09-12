@@ -23,4 +23,8 @@ class User {
         self.password = password
     }
     
+    func generateUsername(name: String, lastname: String) -> String {
+        return name + lastname
+    }
+    
 }
