@@ -13,11 +13,34 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var userLoggedIn = false
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+//        if userLoggedIn {
+//            // if true, sent to the tab controllers
+//        } else {
+//            let rootController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "LoginController")
+//            self.window?.rootViewController = rootController
+//
+//        }
+        
+    
+//        if userLoggedIn{
+//            // MainTab
+//            let tabController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "MainTab")
+//            let tabViewControllers = tabController
+//            // First tab (only one so far...)
+//          
+//            self.window?.rootViewController = tabController
+//            
+//        }else{
+//            // Login View Controller
+//            let rootController = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "LoginController")
+//            self.window?.rootViewController = rootController
+//        }
         
         
         return true

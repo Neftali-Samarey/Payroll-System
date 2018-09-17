@@ -31,5 +31,10 @@ class DashboardControllerViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func initiaLoginController() {
+        let loginController = ViewController()
+        self.present(loginController, animated: false, completion: nil)
+    }
 
 }

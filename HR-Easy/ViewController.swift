@@ -11,9 +11,13 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
     
+    @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var containerYConstraint: NSLayoutConstraint!
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    var loginAttempsCounter = 0
+    let MAX_ATTEMPTS = 3
+     let appDelegate = UIApplication.shared.delegate! as! AppDelegate
     
     var sampleUsers = [User]()
     
@@ -27,9 +31,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         //showKeyboard() // will fix this later
         createUsers()
         self.view.addGestureRecognizer(tap)
-        
     }
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -37,11 +41,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func login(_ sender: Any) {
         guard usernameField.text != "" else {
-            print("Empty username")
+            showAlert(withTitle: "Error", message: "No username entered")
             return
         }
         guard passwordField.text != "" else {
-            print("Empty password")
+            showAlert(withTitle: "Error", message: "No password entered")
             return
         }
         
@@ -71,23 +75,65 @@ class ViewController: UIViewController, UITextFieldDelegate {
     func logUserWith(name: String, password: String) {
         
         // Iterate through the array (database) of users to find the users
-        for users in sampleUsers {
-            if name != users.name || password != users.password {
-                UIView.animate(withDuration: 3, animations: {
-                    // 1
-                    self.usernameField.layer.borderColor = UIColor.red.cgColor
-                    self.usernameField.layer.borderWidth = 3
-                    print("executed")
-                }) { (true) in
-                    // 2
-                
-                  
-                }
-            } else {
-                print("Found User")
+//        for users in sampleUsers {
+//            if name != users.name || password != users.password {
+//                UIView.animate(withDuration: 3, animations: {
+//                    // 1
+//                    self.showAlert(withTitle: "Invalid Login", message: "Login was unsucessfull, please try again")
+//                }) { (true) in
+//                    // 2
+//
+//                }
+//            } else {
+//                print("Found User")
+//            }
+//        }
+        
+        // Log the user in
+        
+
+        if name != "Nef" || password != "hello" {
+        loginAttempsCounter += 1 /// hold a reference to the next account login count
+            print("Number of attempts \(loginAttempsCounter)")
+            if loginAttempsCounter > MAX_ATTEMPTS {
+                showAlert(withTitle: "Too mamy attempts", message: "You have tried the allowed login attempts")
+                // disable the interface from attempting more tries
+                disableControls()
+                showContactSupport()
             }
+        } else {
+            print("Login attempt successfulld")
+            let initialViewController = self.storyboard!.instantiateViewController(withIdentifier: "MainTab")
+    
+            appDelegate.window?.rootViewController = initialViewController
+            appDelegate.window?.makeKeyAndVisible()
         }
-      
+        
+       
+        
+       
+    }
+    
+    func disableControls() {
+        self.loginButton.isEnabled = false
+    }
+    
+    func showContactSupport() {
+        
+        let resetPassview = UIView(frame: CGRect(x: 10, y: -50, width: self.view.bounds.width - 20, height: 40))
+        let contactText = UILabel(frame: CGRect(x: 0, y: 0, width: resetPassview.bounds.width, height: 40))
+        resetPassview.layer.cornerRadius = 8
+        resetPassview.backgroundColor = UIColor.red
+        contactText.text = "Contact Support"
+        contactText.textColor = UIColor.white
+        contactText.textAlignment = .center
+        UIView.animate(withDuration: 0.3) {
+            resetPassview.center.y = 50
+            self.view.addSubview(resetPassview)
+            resetPassview.addSubview(contactText)
+        }
+        
+        
     }
     
     

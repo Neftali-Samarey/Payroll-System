@@ -17,6 +17,7 @@
 		ED150C922148299000B7E380 /* HR_EasyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED150C912148299000B7E380 /* HR_EasyUITests.swift */; };
 		ED6D9CE22148C51200F8405B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6D9CE12148C51200F8405B /* User.swift */; };
 		ED8C436D2149AC270011345D /* DashboardControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8C436C2149AC270011345D /* DashboardControllerViewController.swift */; };
+		ED8C43702149AFC50011345D /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8C436F2149AFC50011345D /* Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		ED150C932148299000B7E380 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED6D9CE12148C51200F8405B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		ED8C436C2149AC270011345D /* DashboardControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardControllerViewController.swift; sourceTree = "<group>"; };
+		ED8C436F2149AFC50011345D /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 			children = (
 				ED150C6E2148298C00B7E380 /* AppDelegate.swift */,
 				ED150C702148298C00B7E380 /* ViewController.swift */,
+				ED8C436E2149AFAD0011345D /* Helpers */,
 				ED8C436B2149AC080011345D /* Controllers */,
 				ED150C9F2148C4CA00B7E380 /* Model */,
 				ED150C722148298C00B7E380 /* Main.storyboard */,
@@ -148,6 +151,14 @@
 				ED8C436C2149AC270011345D /* DashboardControllerViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		ED8C436E2149AFAD0011345D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				ED8C436F2149AFC50011345D /* Helpers.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED6D9CE22148C51200F8405B /* User.swift in Sources */,
+				ED8C43702149AFC50011345D /* Helpers.swift in Sources */,
 				ED150C712148298C00B7E380 /* ViewController.swift in Sources */,
 				ED150C6F2148298C00B7E380 /* AppDelegate.swift in Sources */,
 				ED150C772148298C00B7E380 /* HR_Easy.xcdatamodeld in Sources */,
