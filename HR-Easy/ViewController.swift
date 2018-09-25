@@ -21,14 +21,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     var sampleUsers = [User]()
     
+   
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       
+        
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
         title = "Login"
         self.usernameField.delegate = self
         self.passwordField.delegate = self
         //showKeyboard() // will fix this later
+
         createUsers()
         self.view.addGestureRecognizer(tap)
     }
@@ -60,15 +66,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
             self.containerYConstraint.constant = -100
             
         }
-        
-        
     }
     
     // MARK: - SAMPLE USERS, NOT ON FIREBASE YET
     func createUsers() {
-        let admin = User(name: "Roberto", lastname: "Merlos", admin: true, password: "rmerlos18")
+        let admin = User(name: "Roberto", lastname: "Merlos", admin: true, password: "rmerlos18", role: .Employee)
         sampleUsers.append(admin)
-        let staff = User(name: "Abe", lastname: "Abe", admin: false, password: "abe18^")
+        let staff = User(name: "Abe", lastname: "Abe", admin: false, password: "abe18^", role: .Employee)
         sampleUsers.append(staff)
     }
     
@@ -92,21 +96,34 @@ class ViewController: UIViewController, UITextFieldDelegate {
         // Log the user in
         
 
-        if name != "Nef" || password != "hello" {
+        if name != "nef" || password != "test" {
         loginAttempsCounter += 1 /// hold a reference to the next account login count
+        
             print("Number of attempts \(loginAttempsCounter)")
             if loginAttempsCounter > MAX_ATTEMPTS {
-                showAlert(withTitle: "Too mamy attempts", message: "You have tried the allowed login attempts")
+                showAlert(withTitle: "Too many attempts", message: "You have tried the allowed login attempts")
                 // disable the interface from attempting more tries
                 disableControls()
                 showContactSupport()
             }
         } else {
-            print("Login attempt successfulld")
-            let initialViewController = self.storyboard!.instantiateViewController(withIdentifier: "MainTab")
-    
-            appDelegate.window?.rootViewController = initialViewController
-            appDelegate.window?.makeKeyAndVisible()
+           
+//            let dashboardController = DashboardControllerViewController()
+//            let navigation = UINavigationController(rootViewController: dashboardController)
+//            navigation.modalTransitionStyle = .flipHorizontal
+//            self.present(navigation, animated: true, completion: nil)
+            
+        
+            
+//            appDelegate.window?.rootViewController = tabBar
+//            appDelegate.window?.makeKeyAndVisible()
+            
+            
+            
+            
+//            let initialViewController = self.storyboard!.instantiateViewController(withIdentifier: "MainTab")
+//            appDelegate.window?.rootViewController = initialViewController
+//            appDelegate.window?.makeKeyAndVisible()
         }
         
        
@@ -114,8 +131,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
        
     }
     
+    // MARK: Diable the controls
     func disableControls() {
+        self.usernameField.resignFirstResponder()
+        self.passwordField.resignFirstResponder()
+        self.usernameField.isEnabled = false
+        self.passwordField.isEnabled = false
         self.loginButton.isEnabled = false
+    
+        self.resignFirstResponder()
     }
     
     func showContactSupport() {
@@ -138,6 +162,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     
     //MARK: - TEXTFIELD DELEGATES
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        passwordField.becomeFirstResponder()
+       return true
+    }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField.becomeFirstResponder() {

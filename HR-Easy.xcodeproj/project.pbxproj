@@ -18,6 +18,10 @@
 		ED6D9CE22148C51200F8405B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6D9CE12148C51200F8405B /* User.swift */; };
 		ED8C436D2149AC270011345D /* DashboardControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8C436C2149AC270011345D /* DashboardControllerViewController.swift */; };
 		ED8C43702149AFC50011345D /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8C436F2149AFC50011345D /* Helpers.swift */; };
+		EDCC727E2159F03400513D8F /* user.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EDCC727D2159F03400513D8F /* user.jpg */; };
+		EDCC7280215ABBFB00513D8F /* ReusableComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC727F215ABBFB00513D8F /* ReusableComponents.swift */; };
+		EDE29A88215986CD00BBA61E /* TopNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE29A87215986CD00BBA61E /* TopNavigationController.swift */; };
+		EDE29A8B2159929C00BBA61E /* PHPConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE29A8A2159929C00BBA61E /* PHPConnect.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,10 @@
 		ED6D9CE12148C51200F8405B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		ED8C436C2149AC270011345D /* DashboardControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardControllerViewController.swift; sourceTree = "<group>"; };
 		ED8C436F2149AFC50011345D /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		EDCC727D2159F03400513D8F /* user.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = user.jpg; sourceTree = "<group>"; };
+		EDCC727F215ABBFB00513D8F /* ReusableComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableComponents.swift; sourceTree = "<group>"; };
+		EDE29A87215986CD00BBA61E /* TopNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNavigationController.swift; sourceTree = "<group>"; };
+		EDE29A8A2159929C00BBA61E /* PHPConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHPConnect.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +115,8 @@
 			children = (
 				ED150C6E2148298C00B7E380 /* AppDelegate.swift */,
 				ED150C702148298C00B7E380 /* ViewController.swift */,
+				EDE29A892159928A00BBA61E /* API */,
+				EDE29A86215986B400BBA61E /* Views */,
 				ED8C436E2149AFAD0011345D /* Helpers */,
 				ED8C436B2149AC080011345D /* Controllers */,
 				ED150C9F2148C4CA00B7E380 /* Model */,
@@ -114,6 +124,7 @@
 				ED150C782148298F00B7E380 /* Assets.xcassets */,
 				ED150C7A2148298F00B7E380 /* LaunchScreen.storyboard */,
 				ED150C7D2148298F00B7E380 /* Info.plist */,
+				EDCC727C2159F02700513D8F /* User */,
 				ED150C752148298C00B7E380 /* HR_Easy.xcdatamodeld */,
 			);
 			path = "HR-Easy";
@@ -141,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				ED6D9CE12148C51200F8405B /* User.swift */,
+				EDCC727F215ABBFB00513D8F /* ReusableComponents.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -159,6 +171,30 @@
 				ED8C436F2149AFC50011345D /* Helpers.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		EDCC727C2159F02700513D8F /* User */ = {
+			isa = PBXGroup;
+			children = (
+				EDCC727D2159F03400513D8F /* user.jpg */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		EDE29A86215986B400BBA61E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EDE29A87215986CD00BBA61E /* TopNavigationController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EDE29A892159928A00BBA61E /* API */ = {
+			isa = PBXGroup;
+			children = (
+				EDE29A8A2159929C00BBA61E /* PHPConnect.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +303,7 @@
 			files = (
 				ED150C7C2148298F00B7E380 /* LaunchScreen.storyboard in Resources */,
 				ED150C792148298F00B7E380 /* Assets.xcassets in Resources */,
+				EDCC727E2159F03400513D8F /* user.jpg in Resources */,
 				ED150C742148298C00B7E380 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,8 +332,11 @@
 				ED6D9CE22148C51200F8405B /* User.swift in Sources */,
 				ED8C43702149AFC50011345D /* Helpers.swift in Sources */,
 				ED150C712148298C00B7E380 /* ViewController.swift in Sources */,
+				EDE29A88215986CD00BBA61E /* TopNavigationController.swift in Sources */,
 				ED150C6F2148298C00B7E380 /* AppDelegate.swift in Sources */,
+				EDE29A8B2159929C00BBA61E /* PHPConnect.swift in Sources */,
 				ED150C772148298C00B7E380 /* HR_Easy.xcdatamodeld in Sources */,
+				EDCC7280215ABBFB00513D8F /* ReusableComponents.swift in Sources */,
 				ED8C436D2149AC270011345D /* DashboardControllerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
