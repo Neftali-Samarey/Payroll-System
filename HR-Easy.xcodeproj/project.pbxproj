@@ -20,6 +20,18 @@
 		ED8C43702149AFC50011345D /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8C436F2149AFC50011345D /* Helpers.swift */; };
 		EDCC727E2159F03400513D8F /* user.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EDCC727D2159F03400513D8F /* user.jpg */; };
 		EDCC7280215ABBFB00513D8F /* ReusableComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC727F215ABBFB00513D8F /* ReusableComponents.swift */; };
+		EDCC7282215AF38000513D8F /* EmployeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC7281215AF38000513D8F /* EmployeeTableViewCell.swift */; };
+		EDCC72A4215AF62F00513D8F /* EmployeeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC72A3215AF62F00513D8F /* EmployeeTableViewController.swift */; };
+		EDCC72A6215AF68900513D8F /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC72A5215AF68900513D8F /* Person.swift */; };
+		EDCC72A8215AF7D600513D8F /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC72A7215AF7D600513D8F /* Employee.swift */; };
+		EDCC72AA215D5DC900513D8F /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC72A9215D5DC900513D8F /* ProfileImageView.swift */; };
+		EDCC72AC215D5E8000513D8F /* SampleUserbase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC72AB215D5E8000513D8F /* SampleUserbase.swift */; };
+		EDCC72AF215D639F00513D8F /* rnt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EDCC72AD215D639F00513D8F /* rnt.jpg */; };
+		EDCC72B0215D639F00513D8F /* alx.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EDCC72AE215D639F00513D8F /* alx.jpg */; };
+		EDCC72B2215D66CF00513D8F /* amd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EDCC72B1215D66CF00513D8F /* amd.jpg */; };
+		EDCC72B4215D7BE500513D8F /* EmployeeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC72B3215D7BE500513D8F /* EmployeeDetailViewController.swift */; };
+		EDCC72B62164018600513D8F /* enterprise.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EDCC72B52164018600513D8F /* enterprise.jpg */; };
+		EDCC72B82164191F00513D8F /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC72B72164191F00513D8F /* UIColorExtensions.swift */; };
 		EDE29A88215986CD00BBA61E /* TopNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE29A87215986CD00BBA61E /* TopNavigationController.swift */; };
 		EDE29A8B2159929C00BBA61E /* PHPConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE29A8A2159929C00BBA61E /* PHPConnect.swift */; };
 /* End PBXBuildFile section */
@@ -61,6 +73,18 @@
 		ED8C436F2149AFC50011345D /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		EDCC727D2159F03400513D8F /* user.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = user.jpg; sourceTree = "<group>"; };
 		EDCC727F215ABBFB00513D8F /* ReusableComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableComponents.swift; sourceTree = "<group>"; };
+		EDCC7281215AF38000513D8F /* EmployeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewCell.swift; sourceTree = "<group>"; };
+		EDCC72A3215AF62F00513D8F /* EmployeeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewController.swift; sourceTree = "<group>"; };
+		EDCC72A5215AF68900513D8F /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		EDCC72A7215AF7D600513D8F /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		EDCC72A9215D5DC900513D8F /* ProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
+		EDCC72AB215D5E8000513D8F /* SampleUserbase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleUserbase.swift; sourceTree = "<group>"; };
+		EDCC72AD215D639F00513D8F /* rnt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rnt.jpg; sourceTree = "<group>"; };
+		EDCC72AE215D639F00513D8F /* alx.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = alx.jpg; sourceTree = "<group>"; };
+		EDCC72B1215D66CF00513D8F /* amd.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = amd.jpg; sourceTree = "<group>"; };
+		EDCC72B3215D7BE500513D8F /* EmployeeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailViewController.swift; sourceTree = "<group>"; };
+		EDCC72B52164018600513D8F /* enterprise.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = enterprise.jpg; sourceTree = "<group>"; };
+		EDCC72B72164191F00513D8F /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		EDE29A87215986CD00BBA61E /* TopNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNavigationController.swift; sourceTree = "<group>"; };
 		EDE29A8A2159929C00BBA61E /* PHPConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHPConnect.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,6 +148,7 @@
 				ED150C782148298F00B7E380 /* Assets.xcassets */,
 				ED150C7A2148298F00B7E380 /* LaunchScreen.storyboard */,
 				ED150C7D2148298F00B7E380 /* Info.plist */,
+				EDCC72B52164018600513D8F /* enterprise.jpg */,
 				EDCC727C2159F02700513D8F /* User */,
 				ED150C752148298C00B7E380 /* HR_Easy.xcdatamodeld */,
 			);
@@ -152,6 +177,12 @@
 			isa = PBXGroup;
 			children = (
 				ED6D9CE12148C51200F8405B /* User.swift */,
+				EDCC72A9215D5DC900513D8F /* ProfileImageView.swift */,
+				EDCC72AB215D5E8000513D8F /* SampleUserbase.swift */,
+				EDCC72A7215AF7D600513D8F /* Employee.swift */,
+				EDCC72A5215AF68900513D8F /* Person.swift */,
+				EDCC7281215AF38000513D8F /* EmployeeTableViewCell.swift */,
+				EDCC72B72164191F00513D8F /* UIColorExtensions.swift */,
 				EDCC727F215ABBFB00513D8F /* ReusableComponents.swift */,
 			);
 			path = Model;
@@ -161,6 +192,8 @@
 			isa = PBXGroup;
 			children = (
 				ED8C436C2149AC270011345D /* DashboardControllerViewController.swift */,
+				EDCC72A3215AF62F00513D8F /* EmployeeTableViewController.swift */,
+				EDCC72B3215D7BE500513D8F /* EmployeeDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -177,6 +210,9 @@
 			isa = PBXGroup;
 			children = (
 				EDCC727D2159F03400513D8F /* user.jpg */,
+				EDCC72AE215D639F00513D8F /* alx.jpg */,
+				EDCC72B1215D66CF00513D8F /* amd.jpg */,
+				EDCC72AD215D639F00513D8F /* rnt.jpg */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -304,7 +340,11 @@
 				ED150C7C2148298F00B7E380 /* LaunchScreen.storyboard in Resources */,
 				ED150C792148298F00B7E380 /* Assets.xcassets in Resources */,
 				EDCC727E2159F03400513D8F /* user.jpg in Resources */,
+				EDCC72B0215D639F00513D8F /* alx.jpg in Resources */,
+				EDCC72B2215D66CF00513D8F /* amd.jpg in Resources */,
 				ED150C742148298C00B7E380 /* Main.storyboard in Resources */,
+				EDCC72B62164018600513D8F /* enterprise.jpg in Resources */,
+				EDCC72AF215D639F00513D8F /* rnt.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,11 +372,19 @@
 				ED6D9CE22148C51200F8405B /* User.swift in Sources */,
 				ED8C43702149AFC50011345D /* Helpers.swift in Sources */,
 				ED150C712148298C00B7E380 /* ViewController.swift in Sources */,
+				EDCC7282215AF38000513D8F /* EmployeeTableViewCell.swift in Sources */,
 				EDE29A88215986CD00BBA61E /* TopNavigationController.swift in Sources */,
 				ED150C6F2148298C00B7E380 /* AppDelegate.swift in Sources */,
+				EDCC72A6215AF68900513D8F /* Person.swift in Sources */,
 				EDE29A8B2159929C00BBA61E /* PHPConnect.swift in Sources */,
+				EDCC72B82164191F00513D8F /* UIColorExtensions.swift in Sources */,
+				EDCC72AA215D5DC900513D8F /* ProfileImageView.swift in Sources */,
 				ED150C772148298C00B7E380 /* HR_Easy.xcdatamodeld in Sources */,
+				EDCC72A8215AF7D600513D8F /* Employee.swift in Sources */,
+				EDCC72B4215D7BE500513D8F /* EmployeeDetailViewController.swift in Sources */,
+				EDCC72A4215AF62F00513D8F /* EmployeeTableViewController.swift in Sources */,
 				EDCC7280215ABBFB00513D8F /* ReusableComponents.swift in Sources */,
+				EDCC72AC215D5E8000513D8F /* SampleUserbase.swift in Sources */,
 				ED8C436D2149AC270011345D /* DashboardControllerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

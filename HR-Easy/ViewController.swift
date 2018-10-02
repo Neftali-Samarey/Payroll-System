@@ -11,6 +11,11 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
     
+ 
+   
+    @IBOutlet weak var overlayBackground: UIView!
+    
+    // Outlets for the main interface (login)
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var containerYConstraint: NSLayoutConstraint!
     @IBOutlet weak var usernameField: UITextField!
@@ -22,12 +27,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
     var sampleUsers = [User]()
     
    
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        overlayBackground.layer.backgroundColor  = UIColor.corporateBlue().cgColor
+        overlayBackground.layer.opacity = 0.4
         
-       
+        navigationController?.navigationBar.isHidden = true
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
         title = "Login"
@@ -159,6 +164,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         
     }
+    
+    
+  
     
     
     //MARK: - TEXTFIELD DELEGATES
