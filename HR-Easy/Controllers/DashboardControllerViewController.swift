@@ -11,7 +11,6 @@
 
 import UIKit
 
-
 extension UIImageView {
     
     func setRounded(borderWidth: CGFloat = 0.0, borderColor: UIColor = UIColor.clear) {

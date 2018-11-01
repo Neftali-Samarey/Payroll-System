@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		017AA7CCF4D62B84ADE0A109 /* Pods_HR_Easy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE8609CC5926886711A56202 /* Pods_HR_Easy.framework */; };
+		2666886AE1CBC9649DD311C9 /* Pods_HR_EasyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB02BED970A1FF0F93E78E3 /* Pods_HR_EasyUITests.framework */; };
 		ED150C6F2148298C00B7E380 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED150C6E2148298C00B7E380 /* AppDelegate.swift */; };
 		ED150C712148298C00B7E380 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED150C702148298C00B7E380 /* ViewController.swift */; };
 		ED150C742148298C00B7E380 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED150C722148298C00B7E380 /* Main.storyboard */; };
@@ -18,6 +20,13 @@
 		ED6D9CE22148C51200F8405B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6D9CE12148C51200F8405B /* User.swift */; };
 		ED8C436D2149AC270011345D /* DashboardControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8C436C2149AC270011345D /* DashboardControllerViewController.swift */; };
 		ED8C43702149AFC50011345D /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8C436F2149AFC50011345D /* Helpers.swift */; };
+		EDCB3CB52165702F009BC056 /* AddUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCB3CB42165702F009BC056 /* AddUserController.swift */; };
+		EDCC17BC216BE5150058E9B3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EDCC17BB216BE5140058E9B3 /* GoogleService-Info.plist */; };
+		EDCC17BF216C0D750058E9B3 /* AddUserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC17BE216C0D750058E9B3 /* AddUserTableViewController.swift */; };
+		EDCC17C1216D75DB0058E9B3 /* DetailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC17C0216D75DB0058E9B3 /* DetailData.swift */; };
+		EDCC17F4216F00500058E9B3 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC17F3216F00500058E9B3 /* UserModel.swift */; };
+		EDCC17F6216F03D20058E9B3 /* nef.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EDCC17F5216F03D20058E9B3 /* nef.jpg */; };
+		EDCC17F8216F08020058E9B3 /* ServedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC17F7216F08020058E9B3 /* ServedData.swift */; };
 		EDCC727E2159F03400513D8F /* user.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EDCC727D2159F03400513D8F /* user.jpg */; };
 		EDCC7280215ABBFB00513D8F /* ReusableComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC727F215ABBFB00513D8F /* ReusableComponents.swift */; };
 		EDCC7282215AF38000513D8F /* EmployeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC7281215AF38000513D8F /* EmployeeTableViewCell.swift */; };
@@ -33,7 +42,7 @@
 		EDCC72B62164018600513D8F /* enterprise.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EDCC72B52164018600513D8F /* enterprise.jpg */; };
 		EDCC72B82164191F00513D8F /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC72B72164191F00513D8F /* UIColorExtensions.swift */; };
 		EDE29A88215986CD00BBA61E /* TopNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE29A87215986CD00BBA61E /* TopNavigationController.swift */; };
-		EDE29A8B2159929C00BBA61E /* PHPConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE29A8A2159929C00BBA61E /* PHPConnect.swift */; };
+		F717068595ECB4E8D7E71C34 /* Pods_HR_EasyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D2C953FC72A783805503172 /* Pods_HR_EasyTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +63,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		25B261938B5506087B3DACEB /* Pods-HR-EasyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HR-EasyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HR-EasyTests/Pods-HR-EasyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		28F21FECCFC453D5079CE1EC /* Pods-HR-EasyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HR-EasyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HR-EasyTests/Pods-HR-EasyTests.release.xcconfig"; sourceTree = "<group>"; };
+		4B640220BB3E80C6B5E9270B /* Pods-HR-EasyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HR-EasyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HR-EasyUITests/Pods-HR-EasyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4EC1FB3C0A3ABA6055F6BF50 /* Pods-HR-EasyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HR-EasyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HR-EasyUITests/Pods-HR-EasyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5FB02BED970A1FF0F93E78E3 /* Pods_HR_EasyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HR_EasyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D2C953FC72A783805503172 /* Pods_HR_EasyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HR_EasyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE8609CC5926886711A56202 /* Pods_HR_Easy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HR_Easy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6DD036271AD20DCCC547C4B /* Pods-HR-Easy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HR-Easy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HR-Easy/Pods-HR-Easy.debug.xcconfig"; sourceTree = "<group>"; };
 		ED150C6B2148298C00B7E380 /* HR-Easy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HR-Easy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED150C6E2148298C00B7E380 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED150C702148298C00B7E380 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +88,14 @@
 		ED6D9CE12148C51200F8405B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		ED8C436C2149AC270011345D /* DashboardControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardControllerViewController.swift; sourceTree = "<group>"; };
 		ED8C436F2149AFC50011345D /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		EDCB3CB42165702F009BC056 /* AddUserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserController.swift; sourceTree = "<group>"; };
+		EDCC17BB216BE5140058E9B3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EDCC17BD216BED1C0058E9B3 /* HR-Easy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "HR-Easy.entitlements"; sourceTree = "<group>"; };
+		EDCC17BE216C0D750058E9B3 /* AddUserTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserTableViewController.swift; sourceTree = "<group>"; };
+		EDCC17C0216D75DB0058E9B3 /* DetailData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailData.swift; sourceTree = "<group>"; };
+		EDCC17F3216F00500058E9B3 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		EDCC17F5216F03D20058E9B3 /* nef.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nef.jpg; sourceTree = "<group>"; };
+		EDCC17F7216F08020058E9B3 /* ServedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServedData.swift; sourceTree = "<group>"; };
 		EDCC727D2159F03400513D8F /* user.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = user.jpg; sourceTree = "<group>"; };
 		EDCC727F215ABBFB00513D8F /* ReusableComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableComponents.swift; sourceTree = "<group>"; };
 		EDCC7281215AF38000513D8F /* EmployeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewCell.swift; sourceTree = "<group>"; };
@@ -86,7 +111,7 @@
 		EDCC72B52164018600513D8F /* enterprise.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = enterprise.jpg; sourceTree = "<group>"; };
 		EDCC72B72164191F00513D8F /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		EDE29A87215986CD00BBA61E /* TopNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNavigationController.swift; sourceTree = "<group>"; };
-		EDE29A8A2159929C00BBA61E /* PHPConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHPConnect.swift; sourceTree = "<group>"; };
+		F16ED4F9035FB302572AC8BF /* Pods-HR-Easy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HR-Easy.release.xcconfig"; path = "Pods/Target Support Files/Pods-HR-Easy/Pods-HR-Easy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				017AA7CCF4D62B84ADE0A109 /* Pods_HR_Easy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F717068595ECB4E8D7E71C34 /* Pods_HR_EasyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,12 +135,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2666886AE1CBC9649DD311C9 /* Pods_HR_EasyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9AFB732075C52A30E66A7A4B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D6DD036271AD20DCCC547C4B /* Pods-HR-Easy.debug.xcconfig */,
+				F16ED4F9035FB302572AC8BF /* Pods-HR-Easy.release.xcconfig */,
+				25B261938B5506087B3DACEB /* Pods-HR-EasyTests.debug.xcconfig */,
+				28F21FECCFC453D5079CE1EC /* Pods-HR-EasyTests.release.xcconfig */,
+				4EC1FB3C0A3ABA6055F6BF50 /* Pods-HR-EasyUITests.debug.xcconfig */,
+				4B640220BB3E80C6B5E9270B /* Pods-HR-EasyUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C28FBB9988A23DEE16C14DDE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE8609CC5926886711A56202 /* Pods_HR_Easy.framework */,
+				6D2C953FC72A783805503172 /* Pods_HR_EasyTests.framework */,
+				5FB02BED970A1FF0F93E78E3 /* Pods_HR_EasyUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		ED150C622148298C00B7E380 = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +172,8 @@
 				ED150C852148299000B7E380 /* HR-EasyTests */,
 				ED150C902148299000B7E380 /* HR-EasyUITests */,
 				ED150C6C2148298C00B7E380 /* Products */,
+				9AFB732075C52A30E66A7A4B /* Pods */,
+				C28FBB9988A23DEE16C14DDE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,9 +190,9 @@
 		ED150C6D2148298C00B7E380 /* HR-Easy */ = {
 			isa = PBXGroup;
 			children = (
+				EDCC17BD216BED1C0058E9B3 /* HR-Easy.entitlements */,
 				ED150C6E2148298C00B7E380 /* AppDelegate.swift */,
 				ED150C702148298C00B7E380 /* ViewController.swift */,
-				EDE29A892159928A00BBA61E /* API */,
 				EDE29A86215986B400BBA61E /* Views */,
 				ED8C436E2149AFAD0011345D /* Helpers */,
 				ED8C436B2149AC080011345D /* Controllers */,
@@ -176,7 +229,10 @@
 		ED150C9F2148C4CA00B7E380 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EDCC17BB216BE5140058E9B3 /* GoogleService-Info.plist */,
 				ED6D9CE12148C51200F8405B /* User.swift */,
+				EDCC17F3216F00500058E9B3 /* UserModel.swift */,
+				EDCC17F7216F08020058E9B3 /* ServedData.swift */,
 				EDCC72A9215D5DC900513D8F /* ProfileImageView.swift */,
 				EDCC72AB215D5E8000513D8F /* SampleUserbase.swift */,
 				EDCC72A7215AF7D600513D8F /* Employee.swift */,
@@ -184,6 +240,7 @@
 				EDCC7281215AF38000513D8F /* EmployeeTableViewCell.swift */,
 				EDCC72B72164191F00513D8F /* UIColorExtensions.swift */,
 				EDCC727F215ABBFB00513D8F /* ReusableComponents.swift */,
+				EDCB3CB42165702F009BC056 /* AddUserController.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -194,6 +251,8 @@
 				ED8C436C2149AC270011345D /* DashboardControllerViewController.swift */,
 				EDCC72A3215AF62F00513D8F /* EmployeeTableViewController.swift */,
 				EDCC72B3215D7BE500513D8F /* EmployeeDetailViewController.swift */,
+				EDCC17BE216C0D750058E9B3 /* AddUserTableViewController.swift */,
+				EDCC17C0216D75DB0058E9B3 /* DetailData.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -212,6 +271,7 @@
 				EDCC727D2159F03400513D8F /* user.jpg */,
 				EDCC72AE215D639F00513D8F /* alx.jpg */,
 				EDCC72B1215D66CF00513D8F /* amd.jpg */,
+				EDCC17F5216F03D20058E9B3 /* nef.jpg */,
 				EDCC72AD215D639F00513D8F /* rnt.jpg */,
 			);
 			path = User;
@@ -225,14 +285,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		EDE29A892159928A00BBA61E /* API */ = {
-			isa = PBXGroup;
-			children = (
-				EDE29A8A2159929C00BBA61E /* PHPConnect.swift */,
-			);
-			path = API;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -240,9 +292,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED150C962148299000B7E380 /* Build configuration list for PBXNativeTarget "HR-Easy" */;
 			buildPhases = (
+				9D42D3B4A2888FC465D4AE7A /* [CP] Check Pods Manifest.lock */,
 				ED150C672148298C00B7E380 /* Sources */,
 				ED150C682148298C00B7E380 /* Frameworks */,
 				ED150C692148298C00B7E380 /* Resources */,
+				94B4277D9DC1E8BA21EBA4C7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -257,6 +311,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED150C992148299000B7E380 /* Build configuration list for PBXNativeTarget "HR-EasyTests" */;
 			buildPhases = (
+				0F9461C6BADE465CDAD0CFC3 /* [CP] Check Pods Manifest.lock */,
 				ED150C7E2148299000B7E380 /* Sources */,
 				ED150C7F2148299000B7E380 /* Frameworks */,
 				ED150C802148299000B7E380 /* Resources */,
@@ -275,6 +330,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED150C9C2148299000B7E380 /* Build configuration list for PBXNativeTarget "HR-EasyUITests" */;
 			buildPhases = (
+				CC8E444F74AA15AE1AB06CA7 /* [CP] Check Pods Manifest.lock */,
 				ED150C892148299000B7E380 /* Sources */,
 				ED150C8A2148299000B7E380 /* Frameworks */,
 				ED150C8B2148299000B7E380 /* Resources */,
@@ -301,6 +357,11 @@
 				TargetAttributes = {
 					ED150C6A2148298C00B7E380 = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					ED150C812148299000B7E380 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -342,7 +403,9 @@
 				EDCC727E2159F03400513D8F /* user.jpg in Resources */,
 				EDCC72B0215D639F00513D8F /* alx.jpg in Resources */,
 				EDCC72B2215D66CF00513D8F /* amd.jpg in Resources */,
+				EDCC17BC216BE5150058E9B3 /* GoogleService-Info.plist in Resources */,
 				ED150C742148298C00B7E380 /* Main.storyboard in Resources */,
+				EDCC17F6216F03D20058E9B3 /* nef.jpg in Resources */,
 				EDCC72B62164018600513D8F /* enterprise.jpg in Resources */,
 				EDCC72AF215D639F00513D8F /* rnt.jpg in Resources */,
 			);
@@ -364,6 +427,103 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0F9461C6BADE465CDAD0CFC3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HR-EasyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		94B4277D9DC1E8BA21EBA4C7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HR-Easy/Pods-HR-Easy-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HR-Easy/Pods-HR-Easy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D42D3B4A2888FC465D4AE7A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HR-Easy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC8E444F74AA15AE1AB06CA7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HR-EasyUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		ED150C672148298C00B7E380 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -375,16 +535,20 @@
 				EDCC7282215AF38000513D8F /* EmployeeTableViewCell.swift in Sources */,
 				EDE29A88215986CD00BBA61E /* TopNavigationController.swift in Sources */,
 				ED150C6F2148298C00B7E380 /* AppDelegate.swift in Sources */,
+				EDCC17F4216F00500058E9B3 /* UserModel.swift in Sources */,
 				EDCC72A6215AF68900513D8F /* Person.swift in Sources */,
-				EDE29A8B2159929C00BBA61E /* PHPConnect.swift in Sources */,
 				EDCC72B82164191F00513D8F /* UIColorExtensions.swift in Sources */,
 				EDCC72AA215D5DC900513D8F /* ProfileImageView.swift in Sources */,
+				EDCB3CB52165702F009BC056 /* AddUserController.swift in Sources */,
 				ED150C772148298C00B7E380 /* HR_Easy.xcdatamodeld in Sources */,
+				EDCC17C1216D75DB0058E9B3 /* DetailData.swift in Sources */,
 				EDCC72A8215AF7D600513D8F /* Employee.swift in Sources */,
 				EDCC72B4215D7BE500513D8F /* EmployeeDetailViewController.swift in Sources */,
 				EDCC72A4215AF62F00513D8F /* EmployeeTableViewController.swift in Sources */,
 				EDCC7280215ABBFB00513D8F /* ReusableComponents.swift in Sources */,
+				EDCC17F8216F08020058E9B3 /* ServedData.swift in Sources */,
 				EDCC72AC215D5E8000513D8F /* SampleUserbase.swift in Sources */,
+				EDCC17BF216C0D750058E9B3 /* AddUserTableViewController.swift in Sources */,
 				ED8C436D2149AC270011345D /* DashboardControllerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -556,8 +720,10 @@
 		};
 		ED150C972148299000B7E380 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6DD036271AD20DCCC547C4B /* Pods-HR-Easy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "HR-Easy/HR-Easy.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X752JDEFHP;
 				INFOPLIST_FILE = "HR-Easy/Info.plist";
@@ -574,8 +740,10 @@
 		};
 		ED150C982148299000B7E380 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F16ED4F9035FB302572AC8BF /* Pods-HR-Easy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "HR-Easy/HR-Easy.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X752JDEFHP;
 				INFOPLIST_FILE = "HR-Easy/Info.plist";
@@ -592,6 +760,7 @@
 		};
 		ED150C9A2148299000B7E380 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25B261938B5506087B3DACEB /* Pods-HR-EasyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -613,6 +782,7 @@
 		};
 		ED150C9B2148299000B7E380 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28F21FECCFC453D5079CE1EC /* Pods-HR-EasyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -634,6 +804,7 @@
 		};
 		ED150C9D2148299000B7E380 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EC1FB3C0A3ABA6055F6BF50 /* Pods-HR-EasyUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -654,6 +825,7 @@
 		};
 		ED150C9E2148299000B7E380 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B640220BB3E80C6B5E9270B /* Pods-HR-EasyUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

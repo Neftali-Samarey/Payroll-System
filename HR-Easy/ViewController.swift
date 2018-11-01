@@ -8,6 +8,8 @@
 // User Login
 
 import UIKit
+import FirebaseAuth
+
 
 class ViewController: UIViewController, UITextFieldDelegate {
     
@@ -26,6 +28,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     var sampleUsers = [User]()
     
+    // Keep a ref to the users
+//    let ref = Database.database().reference(withPath: "users")
+    
+    
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +46,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.passwordField.delegate = self
         //showKeyboard() // will fix this later
 
+
         createUsers()
         self.view.addGestureRecognizer(tap)
     }
@@ -51,6 +58,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func login(_ sender: Any) {
+        
         guard usernameField.text != "" else {
             showAlert(withTitle: "Error", message: "No username entered")
             return
@@ -81,7 +89,19 @@ class ViewController: UIViewController, UITextFieldDelegate {
         sampleUsers.append(staff)
     }
     
+    // NOT BEING USED AT THE MOMENT
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "loginSession" {
+            
+        }
+    }
+    
+    
+    
     func logUserWith(name: String, password: String) {
+        
+        
+
         
         // Iterate through the array (database) of users to find the users
 //        for users in sampleUsers {
@@ -136,6 +156,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
        
     }
     
+    
+    
     // MARK: Diable the controls
     func disableControls() {
         self.usernameField.resignFirstResponder()
@@ -162,13 +184,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
             resetPassview.addSubview(contactText)
         }
         
-        
     }
     
-    
-  
-    
-    
+
     //MARK: - TEXTFIELD DELEGATES
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

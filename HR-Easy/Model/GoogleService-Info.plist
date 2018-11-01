@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>190879452577-idf68ktg784rbr8h9ghkp53h6b9u0m4e.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.190879452577-idf68ktg784rbr8h9ghkp53h6b9u0m4e</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAt8z9inR0TcSXFpkHpH4Dk8M2UXxEyD4Y</string>
+	<key>GCM_SENDER_ID</key>
+	<string>190879452577</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>ReactorApps.HR-Easy</string>
+	<key>PROJECT_ID</key>
+	<string>hr-easy-2633b</string>
+	<key>STORAGE_BUCKET</key>
+	<string>hr-easy-2633b.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:190879452577:ios:9cc43bca9b7e10f2</string>
+	<key>DATABASE_URL</key>
+	<string>https://hr-easy-2633b.firebaseio.com</string>
+</dict>
+</plist>

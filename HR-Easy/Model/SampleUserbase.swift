@@ -14,10 +14,11 @@ class SampleUserbase {
     var users = [Person]()
     
     init() {
-        users.append(Person(personName: "Matt", personLastname: "Galvin", ssn: 12346262, userRole: .Engineer, employed: true, image: "user.jpg"))
+        users.append(Person(personName: "Neftali", personLastname: "Samarey", ssn: 20202033, userRole: .Engineer, employed: true, image: "nef.jpg"))
+        users.append(Person(personName: "Jennifer", personLastname: "Galvin", ssn: 12346262, userRole: .HumanResource, employed: true, image: "user.jpg"))
         users.append(Person(personName: "Alex", personLastname: "Apple", ssn: 34398234, userRole: .Doctor, employed: true, image: "alx.jpg"))
         users.append(Person(personName: "Renato", personLastname: "Albin", ssn: 29292929, userRole: .ClientServices, employed: true, image: "rnt.jpg"))
         users.append(Person(personName: "Amanda", personLastname: "Jello", ssn: 29292929, userRole: .Intern, employed: true, image: "amd.jpg"))
-        users.append(Person(personName: "Nef", personLastname: "Samarey", ssn: 20202033, userRole: .Intern, employed: true, image: ""))
+        
     }
 }

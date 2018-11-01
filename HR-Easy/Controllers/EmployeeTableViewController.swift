@@ -8,76 +8,98 @@
 
 import UIKit
 
-class EmployeeTableViewController: UITableViewController {
+class EmployeeTableViewController: UITableViewController, ServedDataProtocol{
     
     
     var employeeData = SampleUserbase()
     var detailController : EmployeeDetailViewController? = nil
     var tableArray = [String] ()
     
+    var screenHeight : CGFloat?
+    var screenWidth : CGFloat?
     
-
+    var feedItems: NSArray = NSArray()
+    var selectedLocation : UserModel = UserModel()
+    
+    
+    lazy var refreshTableControl: UIRefreshControl = {
+        
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action:
+            #selector(EmployeeTableViewController.handleRefresh(_:)),
+                                 for: UIControlEvents.valueChanged)
+        refreshControl.tintColor = UIColor.gray
+        
+        return refreshControl
+    }()
+    
+    @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
+        fetchDataFromSQLServer()
+        self.tableView.reloadData()
+        refreshControl.endRefreshing()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.initializeScreenDimensions()
+        
+        
         self.title = "Employees"
-        parseJson()
         self.extendedLayoutIncludesOpaqueBars = true
         
-        if let split = splitViewController {
-            let controllers = split.viewControllers
-            detailController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? EmployeeDetailViewController
-        }
+        // Delegates
+       fetchDataFromSQLServer()
+        
+        
+//        if let split = splitViewController {
+//            let controllers = split.viewControllers
+//            detailController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? EmployeeDetailViewController
+//        }
     
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        self.tableView.addSubview(refreshTableControl)
     }
     
-    func parseJson() {
-        
-        let url = URL(fileURLWithPath: "http://api.myjson.com/bins/vi56v")
-        let task = URLSession.shared.dataTask(with: url) {(data, response, error ) in
-            guard error == nil else {
-                print("1. returned error")
-                return
-            }
-            
-            if error != nil {
-                
-            }else {
-                print("2. returned error")
-            }
-            
-            guard let content = data else {
-                
-                print("No data")
-                return
-            }
-            
-            guard let json = (try? JSONSerialization.jsonObject(with: content, options: JSONSerialization.ReadingOptions.mutableContainers)) as? [String: Any] else {
-                print("Not containing JSON")
-                return
-            }
-            
-            if let array = json["companies"] as? [String] {
-                self.tableArray = array
-            }
-            
-            print(self.tableArray)
-            
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-            
-            
-            
-            
-        }
-        
-        task.resume()
+    
+    // DELEGATES
+    
+    func fetchDataFromSQLServer() {
+        let downloadModel = ServedData()
+        downloadModel.delegate = self
+        downloadModel.downloadDataFromServer()
     }
+    
+    func itemsDownloaded(items: NSArray) {
+        
+        feedItems = items
+        self.tableView.reloadData()
+    }
+    
+    func itemsDidDownloadFromServer(didDownload: Bool) {
+        guard didDownload else {
+            print("No Data downloaded from the server")
+//            errorDropdown()
+            errorDialog()
+            return
+        }
+        // Some data then downloads from the server
+    }
+    
+    
+    
+    
+    func initializeScreenDimensions() {
+        screenWidth = self.view.bounds.width
+        screenHeight = self.view.bounds.height
+    }
+    
+    
 
     // MARK: - Table view data source
 
@@ -88,7 +110,9 @@ class EmployeeTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     
-        return employeeData.users.count
+        //return employeeData.users.count
+        print("Item count: \(feedItems.count)")
+        return feedItems.count
     }
 
     
@@ -100,20 +124,26 @@ class EmployeeTableViewController: UITableViewController {
         cell.employeeProfileImageView?.layer.cornerRadius = (cell.employeeProfileImageView?.frame.height)!/2
         
         
-        let entity = employeeData.users[indexPath.row].name
+        // TODO; CHECK IMAGES
+       /* let entity = employeeData.users[indexPath.row].name
         let position = employeeData.users[indexPath.row].role // revise **
         let imageview = employeeData.users[indexPath.row].profileImage // profile image
         cell.employeeFullNameLabel.text = entity
         cell.employeeJobFunctionLabel.text = "\(position!)"
-        cell.employeeProfileImageView.image = UIImage(named: imageview as String)
+        cell.employeeProfileImageView.image = UIImage(named: imageview as String) */
 //        cell.employeeFullNameLabel.text = tableArray[indexPath.row]
+       
+        let entity : UserModel = feedItems[indexPath.row] as! UserModel
+        cell.employeeFullNameLabel.text = entity.name
+        cell.employeeJobFunctionLabel.text = entity.position
 
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.tableView.deselectRow(at: indexPath, animated: true)
-        self.performSegue(withIdentifier: "showDetail", sender: self)
+        //self.performSegue(withIdentifier: "showDetail", sender: self)
+       
 //        let selectedEntity = employeeData.users[indexPath.row].name!
         
     }
@@ -123,56 +153,32 @@ class EmployeeTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
         clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
         super.viewWillAppear(animated)
+        fetchDataFromSQLServer()
     }
  
+  
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
+    
 
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         if segue.identifier == "showDetail" {
+            
             print("Selected")
             if let indexPath = tableView.indexPathForSelectedRow {
-                let entitySelected = employeeData.users[indexPath.row].name!
-                let controller = (segue.destination as! UINavigationController).topViewController as! EmployeeDetailViewController
                 
-                controller.title = entitySelected
+                let selectedEmployee : UserModel = feedItems[indexPath.row] as! UserModel
+                
+                
+               // let entitySelected = employeeData.users[indexPath.row].name!
+                let controller = (segue.destination as! UINavigationController).topViewController as! EmployeeDetailViewController
+                controller.title = selectedEmployee.name
+                controller.doesHaveData = true
                 
 //                let object = objects[indexPath.row] as! NSDate
 //                let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
@@ -190,13 +196,71 @@ class EmployeeTableViewController: UITableViewController {
     
     // MARK: - Method to add people
     @IBAction func addEmployee() {
-        
-        // sample database
-//        let person1 = Person(personName: "Andrea", personLastname: "Murcia", ssn: 29102922, userRole: .HumanResource, employed: true, image: "")
-//        self.employeeData.append(person1)
-    
-        tableView.reloadData()
-        
+        self.showModalControllerView()
     }
+    fileprivate func errorDialog() {
+        let errorController = UIAlertController.init(title: "No Internet", message: "There was an error fetching data from the server", preferredStyle: .alert)
+        let controllKey = UIAlertAction.init(title: "Ok", style: .default) { (Void) in
+            //
+        }
+        errorController.addAction(controllKey)
+        self.show(errorController, sender: self)
+    }
+
+    fileprivate func showModalControllerView() {
+      
+    }
+    
+    
+    // TODO: SLIDE THE VIEW DOWN WHEN THE RROR IS SEEN FROM NO INTERNET CONNEDCTION
+    
+    fileprivate func errorDropdown() {
+        
+        let overlayView = UIView(frame: CGRect(x: 0, y: 0, width: self.tableView.bounds.width, height: self.tableView.bounds.height))
+        overlayView.backgroundColor = UIColor.clear
+        overlayView.isUserInteractionEnabled = false
+        self.tableView.addSubview(overlayView)
+            
+            let resetPassview = UIView(frame: CGRect(x: 10, y: -50, width: self.view.bounds.width - 20, height: 40))
+            let contactText = UILabel(frame: CGRect(x: 0, y: 0, width: resetPassview.bounds.width, height: 40))
+            resetPassview.layer.cornerRadius = 8
+            resetPassview.backgroundColor = UIColor.red
+            contactText.text = "Not connected to the internet"
+            contactText.textColor = UIColor.white
+            contactText.textAlignment = .center
+            UIView.animate(withDuration: 0.3) {
+                resetPassview.center.y = 50
+                overlayView.addSubview(resetPassview)
+                //resetPassview.addSubview(contactText)
+            }
+    }
+    
+    
+    
+    fileprivate func createErrorDiallog() {
+        
+        //let app  = UIApplication.shared.delegate? // not used as of now
+        let errorSlideDown = UIView(frame: CGRect(x: 0, y: 0, width: self.tableView.bounds.width, height: 140))
+        errorSlideDown.layer.backgroundColor = UIColor.red.cgColor
+        errorSlideDown.center.y = -100
+        
+        // slide the view down
+        UIView.animate(withDuration: 0.3, animations: {
+            // animate this from the origin
+        errorSlideDown.center.y += 80
+        
+       // self.tableView.addSubview(errorSlideDown)
+           
+        }) { (true) in
+            // completion handler
+        }
+        self.view.layoutIfNeeded()
+    }
+    
+    
+    
+
+}
+extension UIViewController {
 
 }
