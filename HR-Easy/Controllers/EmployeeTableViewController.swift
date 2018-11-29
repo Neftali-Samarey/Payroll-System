@@ -84,8 +84,8 @@ class EmployeeTableViewController: UITableViewController, ServedDataProtocol{
     func itemsDidDownloadFromServer(didDownload: Bool) {
         guard didDownload else {
             print("No Data downloaded from the server")
-//            errorDropdown()
-            errorDialog()
+            errorDropdown()
+        
             return
         }
         // Some data then downloads from the server
@@ -178,6 +178,7 @@ class EmployeeTableViewController: UITableViewController, ServedDataProtocol{
                // let entitySelected = employeeData.users[indexPath.row].name!
                 let controller = (segue.destination as! UINavigationController).topViewController as! EmployeeDetailViewController
                 controller.title = selectedEmployee.name
+                
                 controller.doesHaveData = true
                 
 //                let object = objects[indexPath.row] as! NSDate
@@ -198,12 +199,15 @@ class EmployeeTableViewController: UITableViewController, ServedDataProtocol{
     @IBAction func addEmployee() {
         self.showModalControllerView()
     }
+    
+    // MARK: - ERROR DIALOG NOT IN USE
     fileprivate func errorDialog() {
         let errorController = UIAlertController.init(title: "No Internet", message: "There was an error fetching data from the server", preferredStyle: .alert)
         let controllKey = UIAlertAction.init(title: "Ok", style: .default) { (Void) in
             //
         }
         errorController.addAction(controllKey)
+     
         self.show(errorController, sender: self)
     }
 
@@ -212,27 +216,53 @@ class EmployeeTableViewController: UITableViewController, ServedDataProtocol{
     }
     
     
-    // TODO: SLIDE THE VIEW DOWN WHEN THE RROR IS SEEN FROM NO INTERNET CONNEDCTION
+    // FIXME: DIALOG CONTROLLER NEEDS TO BE DIALLOCATED FOR EVERY CALL THAT IS MADE
     
     fileprivate func errorDropdown() {
         
-        let overlayView = UIView(frame: CGRect(x: 0, y: 0, width: self.tableView.bounds.width, height: self.tableView.bounds.height))
-        overlayView.backgroundColor = UIColor.clear
-        overlayView.isUserInteractionEnabled = false
-        self.tableView.addSubview(overlayView)
-            
+        // This is switching to the main thread in the async queue. Working aleady. don't touch it nef
+        DispatchQueue.main.async {
+            let overlayView = UIView(frame: CGRect(x: 0, y: 0, width: self.tableView.bounds.width, height: self.tableView.bounds.height))
+            overlayView.backgroundColor = UIColor.clear
+            overlayView.isUserInteractionEnabled = false
+            self.view.addSubview(overlayView)
+            //self.tableView.addSubview(overlayView)
+        
+            // main label and view for the dialog itself in the view
             let resetPassview = UIView(frame: CGRect(x: 10, y: -50, width: self.view.bounds.width - 20, height: 40))
-            let contactText = UILabel(frame: CGRect(x: 0, y: 0, width: resetPassview.bounds.width, height: 40))
+            var contactText = UILabel(frame: CGRect(x: 0, y: 0, width: resetPassview.bounds.width, height: 40))
             resetPassview.layer.cornerRadius = 8
             resetPassview.backgroundColor = UIColor.red
             contactText.text = "Not connected to the internet"
             contactText.textColor = UIColor.white
             contactText.textAlignment = .center
-            UIView.animate(withDuration: 0.3) {
-                resetPassview.center.y = 50
+            
+            
+            // animate this and then discard the notification
+            
+            UIView.animate(withDuration: 0.3, animations: {
+                // code
+                resetPassview.center.y = 40
                 overlayView.addSubview(resetPassview)
-                //resetPassview.addSubview(contactText)
-            }
+                resetPassview.addSubview(contactText)
+            }, completion: { (true) in
+                // this after
+                //resetPassview.center.y = -50
+//                resetPassview.removeFromSuperview()
+//                overlayView.removeFromSuperview()
+//                contactText.removeFromSuperview()
+
+            })
+            
+            
+            
+//            UIView.animate(withDuration: 0.3) {
+//                resetPassview.center.y = 50
+//                overlayView.addSubview(resetPassview)
+//                resetPassview.addSubview(contactText)
+//            }
+        
+        }
     }
     
     

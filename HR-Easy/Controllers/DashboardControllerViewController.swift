@@ -22,7 +22,6 @@ extension UIImageView {
 }
 
 
-
 class DashboardControllerViewController: UIViewController {
     
     @IBOutlet weak var viewEmployeesOption: UIView!

@@ -16,7 +16,9 @@ class EmployeeDetailViewController: UIViewController {
 
     var doesHaveData = true
     var selectedCell = false
+    var tableItemCount = 0
     @IBOutlet weak var childView: UIView!
+    
     
     @IBOutlet weak var childTrailingConstraint: NSLayoutConstraint! // target
     @IBOutlet weak var childLeadingConstraint: NSLayoutConstraint! // bottom

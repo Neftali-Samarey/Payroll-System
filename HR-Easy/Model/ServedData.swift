@@ -68,9 +68,9 @@ class ServedData: NSObject, URLSessionDataDelegate {
             let model = UserModel()
             
             //the following insures none of the JsonElement values are nil through optional binding
-            if let id = jsonElement["employee_id"] as? String,
-                let name = jsonElement["name"] as? String,
-                let role = jsonElement["role"] as? String,
+            if let id = jsonElement["iden"] as? String,
+                let name = jsonElement["firstName"] as? String,
+                let role = jsonElement["position"] as? String,
                 let salary = jsonElement["salary"] as? String
             {
                 

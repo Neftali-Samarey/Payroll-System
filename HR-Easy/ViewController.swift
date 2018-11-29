@@ -45,10 +45,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.usernameField.delegate = self
         self.passwordField.delegate = self
         //showKeyboard() // will fix this later
-
+        
 
         createUsers()
         self.view.addGestureRecognizer(tap)
+        self.usernameField.becomeFirstResponder()
     }
 
     
