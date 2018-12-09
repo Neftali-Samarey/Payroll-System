@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 extension UIViewController {
+    
     func showAlert(withTitle title: String?, message: String?) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "Got it", style: .cancel, handler: nil)
@@ -17,3 +18,16 @@ extension UIViewController {
         present(alert, animated: true, completion: nil)
     }
 }
+
+extension String {
+    
+    func CGFloatValue() -> CGFloat? {
+        guard let doubleValue = Double(self) else {
+            return nil
+        }
+        
+        return CGFloat(doubleValue)
+    }
+}
+
+

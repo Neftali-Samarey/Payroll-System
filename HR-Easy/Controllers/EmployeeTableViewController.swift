@@ -14,6 +14,7 @@ class EmployeeTableViewController: UITableViewController, ServedDataProtocol{
     var employeeData = SampleUserbase()
     var detailController : EmployeeDetailViewController? = nil
     var tableArray = [String] ()
+    var employeeCount = 0
     
     var screenHeight : CGFloat?
     var screenWidth : CGFloat?
@@ -35,34 +36,17 @@ class EmployeeTableViewController: UITableViewController, ServedDataProtocol{
     
     @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
         fetchDataFromSQLServer()
+        self.employeeCount = feedItems.count
         self.tableView.reloadData()
         refreshControl.endRefreshing()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.initializeScreenDimensions()
-        
-        
-        self.title = "Employees"
         self.extendedLayoutIncludesOpaqueBars = true
-        
         // Delegates
        fetchDataFromSQLServer()
-        
-        
-//        if let split = splitViewController {
-//            let controllers = split.viewControllers
-//            detailController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? EmployeeDetailViewController
-//        }
-    
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        
         self.tableView.addSubview(refreshTableControl)
     }
     
@@ -78,6 +62,7 @@ class EmployeeTableViewController: UITableViewController, ServedDataProtocol{
     func itemsDownloaded(items: NSArray) {
         
         feedItems = items
+        self.employeeCount = self.feedItems.count
         self.tableView.reloadData()
     }
     
@@ -111,7 +96,6 @@ class EmployeeTableViewController: UITableViewController, ServedDataProtocol{
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     
         //return employeeData.users.count
-        print("Item count: \(feedItems.count)")
         return feedItems.count
     }
 
@@ -134,6 +118,7 @@ class EmployeeTableViewController: UITableViewController, ServedDataProtocol{
 //        cell.employeeFullNameLabel.text = tableArray[indexPath.row]
        
         let entity : UserModel = feedItems[indexPath.row] as! UserModel
+        
         cell.employeeFullNameLabel.text = entity.name
         cell.employeeJobFunctionLabel.text = entity.position
 
@@ -157,6 +142,8 @@ class EmployeeTableViewController: UITableViewController, ServedDataProtocol{
         clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
         super.viewWillAppear(animated)
         fetchDataFromSQLServer()
+        self.title = "\(employeeCount) Employees"
+        print("Number of Employees: \(employeeCount)")
     }
  
   
@@ -239,6 +226,7 @@ class EmployeeTableViewController: UITableViewController, ServedDataProtocol{
             
             
             // animate this and then discard the notification
+           
             
             UIView.animate(withDuration: 0.3, animations: {
                 // code
@@ -246,21 +234,26 @@ class EmployeeTableViewController: UITableViewController, ServedDataProtocol{
                 overlayView.addSubview(resetPassview)
                 resetPassview.addSubview(contactText)
             }, completion: { (true) in
-                // this after
-                //resetPassview.center.y = -50
-//                resetPassview.removeFromSuperview()
-//                overlayView.removeFromSuperview()
-//                contactText.removeFromSuperview()
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+    
+                    UIView.animate(withDuration: 0.3) {
+                        resetPassview.center.y = -50
+                    }
+                    
+//                    if resetPassview.center.y < -50 {
+//                    resetPassview.removeFromSuperview()
+//                    overlayView.removeFromSuperview()
+//                    contactText.removeFromSuperview()
+//                    }
+                }
+            
 
             })
             
             
             
-//            UIView.animate(withDuration: 0.3) {
-//                resetPassview.center.y = 50
-//                overlayView.addSubview(resetPassview)
-//                resetPassview.addSubview(contactText)
-//            }
+           
         
         }
     }

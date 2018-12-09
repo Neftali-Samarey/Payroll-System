@@ -17,6 +17,8 @@
 		ED150C7C2148298F00B7E380 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED150C7A2148298F00B7E380 /* LaunchScreen.storyboard */; };
 		ED150C872148299000B7E380 /* HR_EasyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED150C862148299000B7E380 /* HR_EasyTests.swift */; };
 		ED150C922148299000B7E380 /* HR_EasyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED150C912148299000B7E380 /* HR_EasyUITests.swift */; };
+		ED46686F21B4EEE9002AC117 /* BHBenefits.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED46686E21B4EEE9002AC117 /* BHBenefits.swift */; };
+		ED46687121B4F02A002AC117 /* FetchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED46687021B4F02A002AC117 /* FetchData.swift */; };
 		ED6ACA03219284A4002773DD /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6ACA02219284A4002773DD /* LineChart.swift */; };
 		ED6ACA0521928588002773DD /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6ACA0421928588002773DD /* ReportViewController.swift */; };
 		ED6C36A421AE4AFD009E2B32 /* BenefitsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6C36A321AE4AFD009E2B32 /* BenefitsTableViewCell.swift */; };
@@ -88,6 +90,8 @@
 		ED150C8D2148299000B7E380 /* HR-EasyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HR-EasyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED150C912148299000B7E380 /* HR_EasyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HR_EasyUITests.swift; sourceTree = "<group>"; };
 		ED150C932148299000B7E380 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED46686E21B4EEE9002AC117 /* BHBenefits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BHBenefits.swift; sourceTree = "<group>"; };
+		ED46687021B4F02A002AC117 /* FetchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchData.swift; sourceTree = "<group>"; };
 		ED6ACA02219284A4002773DD /* LineChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
 		ED6ACA0421928588002773DD /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		ED6C36A321AE4AFD009E2B32 /* BenefitsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenefitsTableViewCell.swift; sourceTree = "<group>"; };
@@ -238,6 +242,7 @@
 				ED6ACA02219284A4002773DD /* LineChart.swift */,
 				EDCC17BB216BE5140058E9B3 /* GoogleService-Info.plist */,
 				ED6D9CE12148C51200F8405B /* User.swift */,
+				ED46686D21B4EDC3002AC117 /* Network - Benefits */,
 				EDCC17F3216F00500058E9B3 /* UserModel.swift */,
 				EDCC17F7216F08020058E9B3 /* ServedData.swift */,
 				EDCC72A9215D5DC900513D8F /* ProfileImageView.swift */,
@@ -251,6 +256,15 @@
 				ED6C36A321AE4AFD009E2B32 /* BenefitsTableViewCell.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		ED46686D21B4EDC3002AC117 /* Network - Benefits */ = {
+			isa = PBXGroup;
+			children = (
+				ED46686E21B4EEE9002AC117 /* BHBenefits.swift */,
+				ED46687021B4F02A002AC117 /* FetchData.swift */,
+			);
+			path = "Network - Benefits";
 			sourceTree = "<group>";
 		};
 		ED8C436B2149AC080011345D /* Controllers */ = {
@@ -547,6 +561,8 @@
 				EDE29A88215986CD00BBA61E /* TopNavigationController.swift in Sources */,
 				ED150C6F2148298C00B7E380 /* AppDelegate.swift in Sources */,
 				EDCC17F4216F00500058E9B3 /* UserModel.swift in Sources */,
+				ED46686F21B4EEE9002AC117 /* BHBenefits.swift in Sources */,
+				ED46687121B4F02A002AC117 /* FetchData.swift in Sources */,
 				EDCC72A6215AF68900513D8F /* Person.swift in Sources */,
 				EDCC72B82164191F00513D8F /* UIColorExtensions.swift in Sources */,
 				EDCC72AA215D5DC900513D8F /* ProfileImageView.swift in Sources */,

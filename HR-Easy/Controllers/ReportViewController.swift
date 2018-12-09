@@ -8,14 +8,23 @@
 
 import UIKit
 
-class ReportViewController: UIViewController, LineChartDelegate {
+
+
+class ReportViewController: UIViewController, LineChartDelegate, fetchedDataProtocol {
+    
+  
+    
     
     var isOnline = false
 
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var benefitsTable: UITableView!
     
-    let sample = ["HealthFirst", "EmblemHealth", "MVP Healthcare", "Oscar Health"]
+
+    var benefitPlanData: NSArray = NSArray()
+    var graphDatavalues = [CGFloat]()
+    
+    var selectedLocation : BHBenefits = BHBenefits()
     
     var lineChart: LineChart!
     var label = UILabel()
@@ -25,11 +34,13 @@ class ReportViewController: UIViewController, LineChartDelegate {
         self.loadLineChart()
         benefitsTable.delegate = self
         benefitsTable.dataSource = self
-       
+        fetchFinalData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.fetchFinalData()
+    
         if !isUserOnline() {
            // this will enable the drop down to occur
         }
@@ -40,15 +51,59 @@ class ReportViewController: UIViewController, LineChartDelegate {
         label.text = "x: \(x)     y: \(yValues)"
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - Fetched data delegates
+    // Call this to then fetch the data
+    func fetchFinalData() {
+        let downloadModel = FetchData()
+        downloadModel.delegate = self
+        downloadModel.downloadDataFromServer()
     }
-    */
+    
+    func itemsDownloaded(items: NSArray) {
+        benefitPlanData = items
+       // let benefitsObject : BHBenefits = benefitPlanData[indexPath.row] as! BHBenefits
+        
+        self.benefitsTable.reloadData()
+    }
+    
+    func itemsDidDownloadFromServer(didDownload: Bool) {
+        guard didDownload else {
+            print("No Data downloaded from the server")
+            return
+        }
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(">Benefits: Count: \(benefitPlanData.count)")
+        return benefitPlanData.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "benefitsCell", for: indexPath) as! BenefitsTableViewCell
+        
+        let benefitsObject : BHBenefits = benefitPlanData[indexPath.row] as! BHBenefits
+        let item = benefitsObject.percentage?.CGFloatValue()
+        
+        cell.benefitsLabel.text = benefitsObject.planName
+       
+        
+        
+        
+        return cell
+    }
+    
+    
+    // METHOD:
+    
+    func insertValues(values: CGFloat) {
+        graphDatavalues.append(values)
+    }
+    
 
 }
 
@@ -67,13 +122,15 @@ extension ReportViewController {
         self.mainView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-5-[label]", options: [], metrics: nil, views: views))
         
         // testing this only to see if the actual data is inact to dsiplaying all collection numbeers
-        var testArray = [Int]()
-        for n in 1...10  {
-            testArray.append(n) // appending the new elements in from the array thru iteration
-            print("Numbers iteration: \(n)")
-        }
+//        var testArray = [Int]()
+//        for n in 1...10  {
+//            testArray.append(n) // appending the new elements in from the array thru iteration
+//            print("Numbers iteration: \(n)")
+//        }
         
-        let startDay: [CGFloat] = [10, 9, 8, 6, 5, 4, 2]
+
+        
+        let startDay: [CGFloat] = [0.10, 0.9, 0.8, 0.6, 0.5, 0.4, 0.2]
         //let endDay  : [CGFloat] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
         let xLabels: [String] = ["Humana", "Oscar", "United Healthcare", "Guardian", "EmblemHealth", "Cygna", "MVP Healthcare"]
         
@@ -81,7 +138,7 @@ extension ReportViewController {
         lineChart.animation.enabled = true
         lineChart.area = true
         lineChart.x.labels.visible = true
-        lineChart.x.grid.count = 7
+        lineChart.x.grid.count = CGFloat(integerLiteral: startDay.count)
         lineChart.y.grid.count = 6
         lineChart.x.labels.values = xLabels
         lineChart.y.labels.visible = true
@@ -98,22 +155,12 @@ extension ReportViewController {
         self.lineChart.trailingAnchor.constraint(equalTo: self.mainView.trailingAnchor, constant: -20).isActive = true
         
     }
+
 }
 
 extension ReportViewController: UITableViewDelegate, UITableViewDataSource {
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sample.count
-    }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "benefitsCell", for: indexPath) as! BenefitsTableViewCell
-        
-        cell.benefitsLabel.text = sample[indexPath.row]
-
-        return cell
-    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80.0

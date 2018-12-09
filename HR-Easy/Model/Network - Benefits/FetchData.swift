@@ -9,40 +9,34 @@
 import UIKit
 import Foundation
 
-protocol ServedDataProtocol: class {
+protocol fetchedDataProtocol: class {
     func itemsDownloaded(items: NSArray)
     func itemsDidDownloadFromServer(didDownload: Bool)
-  
 }
 
-class ServedData: NSObject, URLSessionDataDelegate {
-
-    weak var delegate : ServedDataProtocol!
+class FetchData: NSObject, URLSessionDataDelegate {
+    
+    weak var delegate : fetchedDataProtocol!
     
     var data = Data()
-    let urlPath = "http://freehreasy.com/webservice.php"
- 
+    let urlPath = "http://freehreasy.com/dataServices.php"
 
     func downloadDataFromServer() {
-        
         let url: URL = URL(string: urlPath)!
         let defaultSession = Foundation.URLSession(configuration: URLSessionConfiguration.default)
         
+        // Checking to see if the main data is being dowloaded
         let task = defaultSession.dataTask(with: url) { (data, response, error) in
-            
             if error != nil {
                 print("Failed to download data")
                 self.delegate.itemsDidDownloadFromServer(didDownload: false) // send this delegate to the delegator
             }else {
-                print("Data downloaded")
+                print("Benefits data downloaded")
                 self.parseJSON(data!)
             }
-            
         }
-        
         task.resume()
     }
-    
     
     func parseJSON(_ data:Data) {
         
@@ -59,40 +53,39 @@ class ServedData: NSObject, URLSessionDataDelegate {
         var jsonElement = NSDictionary()
         let locations = NSMutableArray()
         
-        for i in 0 ..< jsonResult.count
-        {
+        for i in 0 ..< jsonResult.count {
             
             jsonElement = jsonResult[i] as! NSDictionary
             
-            let model = UserModel()
+            let dataModel = BHBenefits()
             
             //the following insures none of the JsonElement values are nil through optional binding
-            if let id = jsonElement["iden"] as? String,
-                let name = jsonElement["firstName"] as? String,
-                let role = jsonElement["position"] as? String,
-                let salary = jsonElement["salary"] as? String
-                
+            if let name = jsonElement["name"] as? String,
+            let rate = jsonElement["percentage"] as? String
+//                let name = jsonElement["name"] as? String,
+//                let type = jsonElement["type"] as? String,
+//                let percentage = jsonElement["percentage"] as? Float
             {
                 
-                model.id = id
-                model.name = name
-                model.position = role
-                model.salary = salary
+                dataModel.planName = name
+                dataModel.percentage = rate
+//                dataModel.planName = name
+//                dataModel.planType = type
+//                dataModel.percentage = percentage
                 
-            print("RAW: \(salary)")
+//                print("RAW: \(rate)")
                 
             }
-            
-            locations.add(model)
+            locations.add(dataModel)
             
         }
         
         DispatchQueue.main.async(execute: { () -> Void in
             
             self.delegate.itemsDownloaded(items: locations)
-            
+    
         })
     }
-
+    
     
 }
