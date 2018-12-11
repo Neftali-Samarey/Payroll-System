@@ -23,9 +23,10 @@ struct Entity {
     var organization: String!
     
     // TODO: Compute the age of the user
-    var currentAge = {
+    var currentAge : Int {
+        var currentDate : Date
+        // covnert the users age from string to date, then calculate the date based on todays date to get the age
         return 10
-        // compute the age of this user
     }
     
 }
@@ -145,7 +146,7 @@ class EmployeeDetailViewController: UIViewController {
         // Gender label
         var genderLabel = UILabel(frame: CGRect(x: 170, y: 115, width: detailview.bounds.width - 170, height: 25))
         genderLabel.font = UIFont(name: "avenir", size: 21)
-        genderLabel.text = "\(person.gender!) DOB: \(person.dob!) (\(person.currentAge as! Int))"  // the last integer will return th eafe as a String
+        genderLabel.text = "\(person.gender!) | DOB: \(person.dob!) | (Age: \(person.currentAge))"  // the last integer will return th eafe as a String
         
         
         

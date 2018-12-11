@@ -121,6 +121,12 @@ class EmployeeTableViewController: UITableViewController, ServedDataProtocol{
         
         cell.employeeFullNameLabel.text = entity.name
         cell.employeeJobFunctionLabel.text = entity.position
+        if entity.gender == "Male" {
+            cell.employeeProfileImageView.image = UIImage(named: "alx.jpg") // override the main
+        } else if entity.gender == "Female"  {
+             cell.employeeProfileImageView.image = UIImage(named: "user.jpg")
+        }
+        
 
         return cell
     }
