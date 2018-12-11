@@ -47,6 +47,8 @@
 		EDCC72B62164018600513D8F /* enterprise.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EDCC72B52164018600513D8F /* enterprise.jpg */; };
 		EDCC72B82164191F00513D8F /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC72B72164191F00513D8F /* UIColorExtensions.swift */; };
 		EDE29A88215986CD00BBA61E /* TopNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE29A87215986CD00BBA61E /* TopNavigationController.swift */; };
+		EDFBC6E521B9F2E00043F397 /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EDFBC6E421B9F2E00043F397 /* placeholder.jpg */; };
+		EDFBC6E921B9F40E0043F397 /* profilePlace.png in Resources */ = {isa = PBXBuildFile; fileRef = EDFBC6E821B9F40E0043F397 /* profilePlace.png */; };
 		F717068595ECB4E8D7E71C34 /* Pods_HR_EasyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D2C953FC72A783805503172 /* Pods_HR_EasyTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -121,6 +123,8 @@
 		EDCC72B52164018600513D8F /* enterprise.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = enterprise.jpg; sourceTree = "<group>"; };
 		EDCC72B72164191F00513D8F /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		EDE29A87215986CD00BBA61E /* TopNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNavigationController.swift; sourceTree = "<group>"; };
+		EDFBC6E421B9F2E00043F397 /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholder.jpg; sourceTree = "<group>"; };
+		EDFBC6E821B9F40E0043F397 /* profilePlace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profilePlace.png; sourceTree = "<group>"; };
 		F16ED4F9035FB302572AC8BF /* Pods-HR-Easy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HR-Easy.release.xcconfig"; path = "Pods/Target Support Files/Pods-HR-Easy/Pods-HR-Easy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -294,7 +298,9 @@
 				EDCC727D2159F03400513D8F /* user.jpg */,
 				EDCC72AE215D639F00513D8F /* alx.jpg */,
 				EDCC72B1215D66CF00513D8F /* amd.jpg */,
+				EDFBC6E821B9F40E0043F397 /* profilePlace.png */,
 				EDCC17F5216F03D20058E9B3 /* nef.jpg */,
+				EDFBC6E421B9F2E00043F397 /* placeholder.jpg */,
 				EDCC72AD215D639F00513D8F /* rnt.jpg */,
 			);
 			path = User;
@@ -422,6 +428,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED150C7C2148298F00B7E380 /* LaunchScreen.storyboard in Resources */,
+				EDFBC6E921B9F40E0043F397 /* profilePlace.png in Resources */,
 				ED150C792148298F00B7E380 /* Assets.xcassets in Resources */,
 				EDCC727E2159F03400513D8F /* user.jpg in Resources */,
 				EDCC72B0215D639F00513D8F /* alx.jpg in Resources */,
@@ -430,6 +437,7 @@
 				ED150C742148298C00B7E380 /* Main.storyboard in Resources */,
 				EDCC17F6216F03D20058E9B3 /* nef.jpg in Resources */,
 				EDCC72B62164018600513D8F /* enterprise.jpg in Resources */,
+				EDFBC6E521B9F2E00043F397 /* placeholder.jpg in Resources */,
 				EDCC72AF215D639F00513D8F /* rnt.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

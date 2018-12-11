@@ -19,7 +19,7 @@ class FetchData: NSObject, URLSessionDataDelegate {
     weak var delegate : fetchedDataProtocol!
     
     var data = Data()
-    let urlPath = "http://freehreasy.com/dataServices.php"
+    let urlPath = "http://freehreasy.com/BenefitsDataAPI.php"
 
     func downloadDataFromServer() {
         let url: URL = URL(string: urlPath)!

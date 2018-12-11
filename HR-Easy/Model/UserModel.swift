@@ -15,16 +15,26 @@ class UserModel: NSObject {
     var position : String?
     var salary : String?
     
+    // Extended Data
+    var lastname : String?
+    var gender: String?
+    var dob: String?
     
     override init() {
         // Empty
     }
     
-    init(pId: String, pName: String, pSalary: String, pPosition: String) {
+    init(pId: String, pName: String, pSalary: String, pPosition: String, lastname: String, gender: String, dob: String) {
         self.id = pId
         self.name = pName
+        
         self.salary = pSalary
         self.position = pPosition
+        
+        self.lastname = lastname
+        self.gender = gender
+        self.dob = dob
+        
     }
     
     // Print objects current state

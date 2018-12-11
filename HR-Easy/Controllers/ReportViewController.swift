@@ -10,7 +10,7 @@ import UIKit
 
 
 
-class ReportViewController: UIViewController, LineChartDelegate, fetchedDataProtocol {
+class ReportViewController: UIViewController, LineChartDelegate , fetchedDataProtocol {
     
   
     
@@ -78,7 +78,7 @@ class ReportViewController: UIViewController, LineChartDelegate, fetchedDataProt
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(">Benefits: Count: \(benefitPlanData.count)")
+   
         return benefitPlanData.count
     }
     
@@ -130,7 +130,7 @@ extension ReportViewController {
         
 
         
-        let startDay: [CGFloat] = [0.10, 0.9, 0.8, 0.6, 0.5, 0.4, 0.2]
+        let startDay: [CGFloat] = [0.20, 0.30, 0.4, 0.21, 0.5, 0.4, 0.20]
         //let endDay  : [CGFloat] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
         let xLabels: [String] = ["Humana", "Oscar", "United Healthcare", "Guardian", "EmblemHealth", "Cygna", "MVP Healthcare"]
         
@@ -138,7 +138,8 @@ extension ReportViewController {
         lineChart.animation.enabled = true
         lineChart.area = true
         lineChart.x.labels.visible = true
-        lineChart.x.grid.count = CGFloat(integerLiteral: startDay.count)
+//        lineChart.x.grid.count = CGFloat(integerLiteral: startDay.count)
+         lineChart.x.grid.count = 7
         lineChart.y.grid.count = 6
         lineChart.x.labels.values = xLabels
         lineChart.y.labels.visible = true

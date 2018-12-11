@@ -165,8 +165,16 @@ class EmployeeTableViewController: UITableViewController, ServedDataProtocol{
                // let entitySelected = employeeData.users[indexPath.row].name!
                 let controller = (segue.destination as! UINavigationController).topViewController as! EmployeeDetailViewController
                 controller.title = selectedEmployee.name
+                controller.person.name = selectedEmployee.name
+                controller.person.lastName = selectedEmployee.lastname
+                controller.person.postion = selectedEmployee.position
+                controller.person.gender = selectedEmployee.gender
+                controller.person.dob = selectedEmployee.dob
                 
+                controller.didSelectAnotherUser = true
+                controller.slideViewWithData()
                 controller.doesHaveData = true
+                
                 
 //                let object = objects[indexPath.row] as! NSDate
 //                let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController

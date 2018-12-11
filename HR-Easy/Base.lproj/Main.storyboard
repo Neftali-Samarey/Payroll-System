@@ -170,28 +170,28 @@
                                         <rect key="frame" x="0.0" y="249.5" width="1024" height="219"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overview" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQ3-Wt-SuE">
-                                                <rect key="frame" x="0.0" y="0.0" width="1024" height="38"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="1024" height="37"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SNw-dm-EJn">
-                                                <rect key="frame" x="0.0" y="38" width="1024" height="181"/>
+                                                <rect key="frame" x="0.0" y="37" width="1024" height="182"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="i3L-Mp-FYW">
-                                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="181"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="182"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GLM-oX-DL4">
-                                                                <rect key="frame" x="0.0" y="0.0" width="328" height="181"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="328" height="182"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="5vB-rq-9I2">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="328" height="181"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="328" height="182"/>
                                                                         <subviews>
                                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Employees" translatesAutoresizingMaskIntoConstraints="NO" id="Ev2-9w-OhT">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="328" height="165"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="328" height="166"/>
                                                                             </imageView>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wYb-iK-hc4">
-                                                                                <rect key="frame" x="0.0" y="165" width="328" height="16"/>
+                                                                                <rect key="frame" x="0.0" y="166" width="328" height="16"/>
                                                                                 <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="18"/>
                                                                                 <state key="normal" title="Employees">
                                                                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -209,16 +209,16 @@
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8bq-d1-WcH">
-                                                                <rect key="frame" x="348" y="0.0" width="328" height="181"/>
+                                                                <rect key="frame" x="348" y="0.0" width="328" height="182"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="j80-GT-rDx">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="328" height="181"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="328" height="182"/>
                                                                         <subviews>
                                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Money" translatesAutoresizingMaskIntoConstraints="NO" id="6Il-ow-PEG">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="328" height="165"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="328" height="166"/>
                                                                             </imageView>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M62-Kl-Chi">
-                                                                                <rect key="frame" x="0.0" y="165" width="328" height="16"/>
+                                                                                <rect key="frame" x="0.0" y="166" width="328" height="16"/>
                                                                                 <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="18"/>
                                                                                 <state key="normal" title="Payroll">
                                                                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -236,16 +236,16 @@
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v8l-ZN-SGP">
-                                                                <rect key="frame" x="696" y="0.0" width="328" height="181"/>
+                                                                <rect key="frame" x="696" y="0.0" width="328" height="182"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="77a-2h-MIP">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="328" height="181"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="328" height="182"/>
                                                                         <subviews>
                                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Statistics" translatesAutoresizingMaskIntoConstraints="NO" id="kYe-3p-xFW">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="328" height="165.5"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="328" height="166.5"/>
                                                                             </imageView>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Juj-if-Q83">
-                                                                                <rect key="frame" x="0.0" y="165.5" width="328" height="15.5"/>
+                                                                                <rect key="frame" x="0.0" y="166.5" width="328" height="15.5"/>
                                                                                 <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="18"/>
                                                                                 <state key="normal" title="Report">
                                                                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -395,30 +395,11 @@
                     <view key="view" contentMode="scaleToFill" id="HPj-Wd-HXZ">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5jO-lR-v14" customClass="DetailData" customModule="HR_Easy">
-                                <rect key="frame" x="3" y="73" width="1018" height="692"/>
-                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" red="0.1176470588" green="0.56470588239999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="5jO-lR-v14" firstAttribute="leading" secondItem="r4m-ql-gJQ" secondAttribute="leading" constant="3" id="6nd-fU-FQp"/>
-                            <constraint firstItem="r4m-ql-gJQ" firstAttribute="trailing" secondItem="5jO-lR-v14" secondAttribute="trailing" constant="3" id="Pru-7V-HU2"/>
-                            <constraint firstItem="r4m-ql-gJQ" firstAttribute="bottom" secondItem="5jO-lR-v14" secondAttribute="bottom" constant="3" id="XzK-Y2-oeR"/>
-                            <constraint firstItem="5jO-lR-v14" firstAttribute="top" secondItem="r4m-ql-gJQ" secondAttribute="top" constant="3" id="feI-4Z-JMh"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="r4m-ql-gJQ"/>
                     </view>
                     <navigationItem key="navigationItem" id="ftp-Nk-M8U"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
-                    <connections>
-                        <outlet property="childLeadingConstraint" destination="XzK-Y2-oeR" id="rTv-Pi-esc"/>
-                        <outlet property="childLeadingSafeConstraint" destination="6nd-fU-FQp" id="jWs-4H-itz"/>
-                        <outlet property="childTopSafeConstraint" destination="feI-4Z-JMh" id="ENu-bH-OIy"/>
-                        <outlet property="childTrailingConstraint" destination="Pru-7V-HU2" id="OEI-D8-kX7"/>
-                        <outlet property="childView" destination="5jO-lR-v14" id="bzm-dp-wlE"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cff-pw-4tc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -440,7 +421,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="986" height="79.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="CJz-9u-1Fb" customClass="ProfileImageView" customModule="HR_Easy" customModuleProvider="target">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePlace.png" translatesAutoresizingMaskIntoConstraints="NO" id="CJz-9u-1Fb" customClass="ProfileImageView" customModule="HR_Easy" customModuleProvider="target">
                                             <rect key="frame" x="16" y="8" width="64" height="64"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="64" id="6i1-pF-ev9"/>
@@ -823,6 +804,7 @@
         <image name="Employees" width="400.69564819335938" height="400.69564819335938"/>
         <image name="Money" width="400.69564819335938" height="400.69564819335938"/>
         <image name="Statistics" width="409.60000610351562" height="409.60000610351562"/>
+        <image name="profilePlace.png" width="837" height="713"/>
         <image name="user.jpg" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>

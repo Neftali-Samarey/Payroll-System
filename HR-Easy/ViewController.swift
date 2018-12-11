@@ -49,7 +49,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
         createUsers()
         self.view.addGestureRecognizer(tap)
-        self.usernameField.becomeFirstResponder()
+       //r self.usernameField.becomeFirstResponder()
     }
 
     

@@ -70,7 +70,12 @@ class ServedData: NSObject, URLSessionDataDelegate {
             if let id = jsonElement["iden"] as? String,
                 let name = jsonElement["firstName"] as? String,
                 let role = jsonElement["position"] as? String,
-                let salary = jsonElement["salary"] as? String
+                let salary = jsonElement["salary"] as? String,
+                let lastName = jsonElement["lastName"] as? String,
+                
+                let gender = jsonElement["gender"] as? String,
+                let dob = jsonElement["dob"] as? String
+                
                 
             {
                 
@@ -78,8 +83,11 @@ class ServedData: NSObject, URLSessionDataDelegate {
                 model.name = name
                 model.position = role
                 model.salary = salary
+                model.lastname = lastName
+                model.gender = gender
+                model.dob = dob
                 
-            print("RAW: \(salary)")
+            print("RAW: \(lastName)")
                 
             }
             

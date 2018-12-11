@@ -9,7 +9,6 @@
 import UIKit
 
 class BHBenefits: NSObject {
-    
     var id : Int?
     var planName : String?
     var planType : String?
