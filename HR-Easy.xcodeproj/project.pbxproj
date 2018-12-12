@@ -30,7 +30,6 @@
 		EDCC17BF216C0D750058E9B3 /* AddUserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC17BE216C0D750058E9B3 /* AddUserTableViewController.swift */; };
 		EDCC17C1216D75DB0058E9B3 /* DetailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC17C0216D75DB0058E9B3 /* DetailData.swift */; };
 		EDCC17F4216F00500058E9B3 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC17F3216F00500058E9B3 /* UserModel.swift */; };
-		EDCC17F6216F03D20058E9B3 /* nef.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EDCC17F5216F03D20058E9B3 /* nef.jpg */; };
 		EDCC17F8216F08020058E9B3 /* ServedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC17F7216F08020058E9B3 /* ServedData.swift */; };
 		EDCC727E2159F03400513D8F /* user.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EDCC727D2159F03400513D8F /* user.jpg */; };
 		EDCC7280215ABBFB00513D8F /* ReusableComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCC727F215ABBFB00513D8F /* ReusableComponents.swift */; };
@@ -109,7 +108,6 @@
 		EDCC17BE216C0D750058E9B3 /* AddUserTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserTableViewController.swift; sourceTree = "<group>"; };
 		EDCC17C0216D75DB0058E9B3 /* DetailData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailData.swift; sourceTree = "<group>"; };
 		EDCC17F3216F00500058E9B3 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		EDCC17F5216F03D20058E9B3 /* nef.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nef.jpg; sourceTree = "<group>"; };
 		EDCC17F7216F08020058E9B3 /* ServedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServedData.swift; sourceTree = "<group>"; };
 		EDCC727D2159F03400513D8F /* user.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = user.jpg; sourceTree = "<group>"; };
 		EDCC727F215ABBFB00513D8F /* ReusableComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableComponents.swift; sourceTree = "<group>"; };
@@ -308,7 +306,6 @@
 				EDCC72B1215D66CF00513D8F /* amd.jpg */,
 				EDFBC6F221C0784E0043F397 /* self.jpg */,
 				EDFBC6E821B9F40E0043F397 /* profilePlace.png */,
-				EDCC17F5216F03D20058E9B3 /* nef.jpg */,
 				EDFBC6E421B9F2E00043F397 /* placeholder.jpg */,
 				EDCC72AD215D639F00513D8F /* rnt.jpg */,
 			);
@@ -445,7 +442,6 @@
 				EDCC72B2215D66CF00513D8F /* amd.jpg in Resources */,
 				EDCC17BC216BE5150058E9B3 /* GoogleService-Info.plist in Resources */,
 				ED150C742148298C00B7E380 /* Main.storyboard in Resources */,
-				EDCC17F6216F03D20058E9B3 /* nef.jpg in Resources */,
 				EDFBC6F521C0D23C0043F397 /* README.md in Resources */,
 				EDCC72B62164018600513D8F /* enterprise.jpg in Resources */,
 				EDFBC6E521B9F2E00043F397 /* placeholder.jpg in Resources */,
