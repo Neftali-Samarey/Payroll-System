@@ -19,10 +19,10 @@ The app was designed using Storyboards due to the time constraint of using a  pr
 
 
 <div align = "center">
-<img src="Screenshots/image1.png" width="650" />
+<img src="Screenshots/image1.png" width="700" /><br/>
 <span>Sample user to be paid</span>
 <br/>
-<img src="Screenshots/image2.png" width="650" />
+<img src="Screenshots/image2.png" width="700" /><br/>
 <span>Sample user paid</span>
 </div>
 
