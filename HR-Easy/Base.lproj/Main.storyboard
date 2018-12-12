@@ -126,7 +126,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mY7-os-d31">
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="219.5"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="fud-7G-41h">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="self.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="fud-7G-41h">
                                                 <rect key="frame" x="45" y="45" width="128" height="128"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="128" id="2cj-ZB-JVe"/>
@@ -805,7 +805,7 @@
         <image name="Money" width="400.69564819335938" height="400.69564819335938"/>
         <image name="Statistics" width="409.60000610351562" height="409.60000610351562"/>
         <image name="profilePlace.png" width="837" height="713"/>
-        <image name="user.jpg" width="128" height="128"/>
+        <image name="self.jpg" width="359" height="377"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Dxg-xi-cti"/>

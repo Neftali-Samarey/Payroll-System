@@ -49,6 +49,9 @@
 		EDE29A88215986CD00BBA61E /* TopNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE29A87215986CD00BBA61E /* TopNavigationController.swift */; };
 		EDFBC6E521B9F2E00043F397 /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EDFBC6E421B9F2E00043F397 /* placeholder.jpg */; };
 		EDFBC6E921B9F40E0043F397 /* profilePlace.png in Resources */ = {isa = PBXBuildFile; fileRef = EDFBC6E821B9F40E0043F397 /* profilePlace.png */; };
+		EDFBC6F121C06AE80043F397 /* SweetAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFBC6F021C06AE80043F397 /* SweetAlert.swift */; };
+		EDFBC6F321C0784F0043F397 /* self.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EDFBC6F221C0784E0043F397 /* self.jpg */; };
+		EDFBC6F521C0D23C0043F397 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = EDFBC6F421C0D23C0043F397 /* README.md */; };
 		F717068595ECB4E8D7E71C34 /* Pods_HR_EasyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D2C953FC72A783805503172 /* Pods_HR_EasyTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -125,6 +128,9 @@
 		EDE29A87215986CD00BBA61E /* TopNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNavigationController.swift; sourceTree = "<group>"; };
 		EDFBC6E421B9F2E00043F397 /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholder.jpg; sourceTree = "<group>"; };
 		EDFBC6E821B9F40E0043F397 /* profilePlace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profilePlace.png; sourceTree = "<group>"; };
+		EDFBC6F021C06AE80043F397 /* SweetAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SweetAlert.swift; sourceTree = "<group>"; };
+		EDFBC6F221C0784E0043F397 /* self.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = self.jpg; sourceTree = "<group>"; };
+		EDFBC6F421C0D23C0043F397 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F16ED4F9035FB302572AC8BF /* Pods-HR-Easy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HR-Easy.release.xcconfig"; path = "Pods/Target Support Files/Pods-HR-Easy/Pods-HR-Easy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -182,6 +188,7 @@
 		ED150C622148298C00B7E380 = {
 			isa = PBXGroup;
 			children = (
+				EDFBC6F421C0D23C0043F397 /* README.md */,
 				ED150C6D2148298C00B7E380 /* HR-Easy */,
 				ED150C852148299000B7E380 /* HR-EasyTests */,
 				ED150C902148299000B7E380 /* HR-EasyUITests */,
@@ -288,6 +295,7 @@
 			isa = PBXGroup;
 			children = (
 				ED8C436F2149AFC50011345D /* Helpers.swift */,
+				EDFBC6F021C06AE80043F397 /* SweetAlert.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -298,6 +306,7 @@
 				EDCC727D2159F03400513D8F /* user.jpg */,
 				EDCC72AE215D639F00513D8F /* alx.jpg */,
 				EDCC72B1215D66CF00513D8F /* amd.jpg */,
+				EDFBC6F221C0784E0043F397 /* self.jpg */,
 				EDFBC6E821B9F40E0043F397 /* profilePlace.png */,
 				EDCC17F5216F03D20058E9B3 /* nef.jpg */,
 				EDFBC6E421B9F2E00043F397 /* placeholder.jpg */,
@@ -431,11 +440,13 @@
 				EDFBC6E921B9F40E0043F397 /* profilePlace.png in Resources */,
 				ED150C792148298F00B7E380 /* Assets.xcassets in Resources */,
 				EDCC727E2159F03400513D8F /* user.jpg in Resources */,
+				EDFBC6F321C0784F0043F397 /* self.jpg in Resources */,
 				EDCC72B0215D639F00513D8F /* alx.jpg in Resources */,
 				EDCC72B2215D66CF00513D8F /* amd.jpg in Resources */,
 				EDCC17BC216BE5150058E9B3 /* GoogleService-Info.plist in Resources */,
 				ED150C742148298C00B7E380 /* Main.storyboard in Resources */,
 				EDCC17F6216F03D20058E9B3 /* nef.jpg in Resources */,
+				EDFBC6F521C0D23C0043F397 /* README.md in Resources */,
 				EDCC72B62164018600513D8F /* enterprise.jpg in Resources */,
 				EDFBC6E521B9F2E00043F397 /* placeholder.jpg in Resources */,
 				EDCC72AF215D639F00513D8F /* rnt.jpg in Resources */,
@@ -580,6 +591,7 @@
 				EDCC17C1216D75DB0058E9B3 /* DetailData.swift in Sources */,
 				EDCC72A8215AF7D600513D8F /* Employee.swift in Sources */,
 				EDCC72B4215D7BE500513D8F /* EmployeeDetailViewController.swift in Sources */,
+				EDFBC6F121C06AE80043F397 /* SweetAlert.swift in Sources */,
 				EDCC72A4215AF62F00513D8F /* EmployeeTableViewController.swift in Sources */,
 				EDCC7280215ABBFB00513D8F /* ReusableComponents.swift in Sources */,
 				EDCC17F8216F08020058E9B3 /* ServedData.swift in Sources */,

@@ -17,16 +17,36 @@ struct Entity {
     var name: String!
     var lastName: String!
     var postion: String!
+    var employeeId : String!
     var gender: String!
     var socialSecurity : String!
     var dob : String!
     var organization: String!
     
+    var maritalStatus: String!
+    var dependents: String!
+    var organization_2: String!
+    var dept : String!
+    var start: String!
+    var salary: String! // Hourly
+    var hoursWorked: String!
+    
+    var finalSalary : Double { // payrate * 0.0745
+        
+        let localSalary = Double(salary)
+        let localHours = Double(hoursWorked)
+        let overall = (localHours! * localSalary!)
+        let newRate = ( overall * overall) * 0.0745
+        
+        let overall_2 = Double(localSalary! * localHours! - (localSalary! * localHours! * 0.0745))
+        return overall_2
+    }
+    
     // TODO: Compute the age of the user
     var currentAge : Int {
         var currentDate : Date
         // covnert the users age from string to date, then calculate the date based on todays date to get the age
-        return 10
+        return 0
     }
     
 }
@@ -51,6 +71,11 @@ class EmployeeDetailViewController: UIViewController {
     @IBOutlet weak var nameLabelTest: UILabel!
     
     var person = Entity()
+    
+    var unpaidColor = UIColor()
+    var payButton = UIButton()
+    var payRateLabel = UILabel()
+    
     
     
     var delegate : UserDidSelectCellDelegate? = nil
@@ -100,7 +125,7 @@ class EmployeeDetailViewController: UIViewController {
         
     }
     
-
+    
     
     func calculateScreenSizeWidth() -> CGFloat {
         let localWidth : CGFloat = self.view.bounds.size.width
@@ -111,10 +136,8 @@ class EmployeeDetailViewController: UIViewController {
     // PROGRAMMTIC APPROACH
     func slideViewWithData() {
         
-        
-        
         let detailview = UIView(frame: CGRect(x: 10, y: 80, width: 680, height: 620))
-        detailview.layer.cornerRadius  = 10
+        detailview.layer.cornerRadius  = 6
         detailview.backgroundColor = UIColor.white
         detailview.center.x = self.view.center.x + 600
         
@@ -127,8 +150,9 @@ class EmployeeDetailViewController: UIViewController {
         
         // Position
         let positionLabel = UILabel(frame: CGRect(x: 170, y: 80, width: detailview.bounds.width - 170, height: 24))
-        positionLabel.text = person.postion!
-        positionLabel.font = UIFont(name: "avenir", size: 24)
+        positionLabel.text = "\(person.postion!) \t Employee ID: \(person.employeeId!)"
+        positionLabel.font = UIFont(name: "avenir", size: 19)
+        positionLabel.textColor = UIColor.gray
 //        positionLabel.layer.borderWidth = 1
         
         // Image object
@@ -144,11 +168,51 @@ class EmployeeDetailViewController: UIViewController {
         
         
         // Gender label
-        var genderLabel = UILabel(frame: CGRect(x: 170, y: 115, width: detailview.bounds.width - 170, height: 25))
+        let genderLabel = UILabel(frame: CGRect(x: 170, y: 115, width: detailview.bounds.width - 170, height: 25))
         genderLabel.font = UIFont(name: "avenir", size: 21)
-        genderLabel.text = "\(person.gender!) | DOB: \(person.dob!) | (Age: \(person.currentAge))"  // the last integer will return th eafe as a String
+        genderLabel.text = "\(person.gender!) | DOB: \(person.dob!))"  // the last integer will return th eafe as a String
         
         
+        // Salary Label
+        let horizontalLabel = UILabel(frame: CGRect(x: 10, y: 150, width: detailview.bounds.width, height: 34))
+        horizontalLabel.font = UIFont(name: "avenir", size: 25)
+        horizontalLabel.textAlignment = .left
+        horizontalLabel.textColor = UIColor.gray
+        horizontalLabel.text = "General Info"
+        
+        // More of the General information
+        
+        let informationLabel = UILabel(frame: CGRect(x: 10, y: 190, width: detailview.bounds.width, height: 20))
+        informationLabel.font = UIFont(name: "avenir", size: 18)
+        informationLabel.text = "Marital Status: \(person.maritalStatus!) \t SSN: \(person.socialSecurity!) \t Dependents: \(person.dependents!)"
+        
+        let horizontalLabel2 = UILabel(frame: CGRect(x: 10, y: 220, width: detailview.bounds.width, height: 34))
+        horizontalLabel2.font = UIFont(name: "avenir", size: 25)
+        horizontalLabel2.textColor = UIColor.gray
+        horizontalLabel2.textAlignment = .left
+        horizontalLabel2.text = "Employment Info"
+        
+        let employmentLabel = UILabel(frame: CGRect(x: 10, y: 260, width: detailview.bounds.width, height: 80))
+        employmentLabel.font = UIFont(name: "avenir", size: 18)
+        employmentLabel.numberOfLines = 4
+        employmentLabel.text = "Organization: \(person.organization_2!) \t Department: \(person.dept!) \t \n Start Date: \(person.start!) Hours Worked: \(person.hoursWorked!)\n Salary (p/hour): \(person.salary!)"
+        
+        unpaidColor = UIColor.sunflowerColor()
+       
+        
+        payRateLabel = UILabel(frame: CGRect(x: 10, y: 350, width: detailview.bounds.width - 30, height: 22))
+        payRateLabel.font = UIFont(name: "avenir", size: 20)
+        payRateLabel.textAlignment = .right
+        payRateLabel.textColor = UIColor.red
+        payRateLabel.text = "Payment Due: $\(person.finalSalary)"
+        
+        
+        /// Pay button
+        
+        payButton = UIButton(frame: CGRect(x: 230, y: 400, width: 200, height: 60))
+        payButton.setTitle("Pay \(person.name!)", for: .normal)
+        payButton.backgroundColor = unpaidColor
+        payButton.addTarget(self, action: #selector(self.comfirmPay), for: .touchUpInside)
         
         
         // Subview
@@ -156,6 +220,13 @@ class EmployeeDetailViewController: UIViewController {
         detailview.addSubview(positionLabel)
         detailview.addSubview(customImage)
         detailview.addSubview(genderLabel)
+        detailview.addSubview(horizontalLabel)
+        detailview.addSubview(informationLabel)
+        detailview.addSubview(horizontalLabel2)
+        detailview.addSubview(employmentLabel)
+        detailview.addSubview(payRateLabel)
+        detailview.addSubview(payButton)
+        
         
         UIView.animate(withDuration: 0.3) {
             self.view.addSubview(detailview)
@@ -167,11 +238,43 @@ class EmployeeDetailViewController: UIViewController {
         
     }
     
+      var alert = SweetAlert() // using as a ref
     
     func slideViewWithDataFromDatabase() {
         
     }
     
+    
+    @objc func comfirmPay() {
+//        SweetAlert().showAlert("Comfirm", subTitle: "Subtitle", style: .warning, buttonTitle: "OK", buttonColor: UIColor.emeraldColor(), otherButtonTitle: "Cancel")
+    
+        SweetAlert().showAlert("Comfirm Payment", subTitle: "Are you sure you want to make a direct deposit to \(person.name!) ?", style: AlertStyle.warning, buttonTitle:"Cancel", buttonColor:UIColor.sunflowerColor() , otherButtonTitle:  "Pay", otherButtonColor: UIColor.fRedColor()) { (isOtherButton) -> Void in
+            if isOtherButton == true {
+                
+                print("Cancel Button  Pressed")
+            }
+            else {
+                SweetAlert().showAlert("Payed!", subTitle: "You've payed \(self.person.name!) a total of $\(self.person.finalSalary)", style: AlertStyle.success)
+                // Animte view
+                DispatchQueue.main.async(execute: { () -> Void in
+                    UIView.animate(withDuration: 0.3, animations: {
+                        self.payButton.backgroundColor = UIColor.emeraldColor()
+                        self.payButton.setTitle("PAID", for: .normal)
+                        self.payButton.isEnabled = false
+                        self.payRateLabel.textColor = UIColor.emeraldColor()
+                        self.payRateLabel.text = "$00.00"
+                    })
+                })
+               
+                // End
+            }
+        }
+        
+//        SweetAlert().showAlert("Comfirm", subTitle: "Subtitle", style: .warning, buttonTitle: "Ok", buttonColor: UIColor.emeraldColor(), otherButtonTitle: "Cancel") { (true) in
+//            // Rest of the code
+//        }
+
+    }
 
     /*
     // MARK: - Navigation

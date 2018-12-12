@@ -39,5 +39,16 @@ extension UIColor {
     class func corporateDarkBlue()-> UIColor {
         return UIColor(r:0, g: 71, b: 141)  // return UIColor(r:0, g: 42, b: 82) GOOD COLOR
     }
+    
+    class func emeraldColor()->UIColor {
+        return UIColor(r: 46, g: 204, b: 113)
+    }
+    
+    class func fRedColor()->UIColor {
+        return UIColor(r:231, g:91, b:76)
+    }
+    class func sunflowerColor()->UIColor {
+        return UIColor(r:241, g:196, b:15)
+    }
 
 }

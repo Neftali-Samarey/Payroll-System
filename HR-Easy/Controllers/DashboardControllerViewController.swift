@@ -45,9 +45,9 @@ class DashboardControllerViewController: UIViewController {
     }
     
     func createFakeAdmin() {
-        var adriana = User(name: "Adriana ", lastname: "Sevilla", admin: true, password: "sevilla00", role: .Admin)
+        var adriana = User(name: "Neftali ", lastname: "Samarey", admin: true, password: "sevilla00", role: .Admin)
         self.profileNameLabel.text = adriana.name + adriana.lastName
-        self.profileRoleLabel.text = "Admin"
+        self.profileRoleLabel.text = "Staff"
     }
 
     override func viewWillLayoutSubviews() {

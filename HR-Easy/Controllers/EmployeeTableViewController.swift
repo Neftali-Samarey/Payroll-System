@@ -174,8 +174,17 @@ class EmployeeTableViewController: UITableViewController, ServedDataProtocol{
                 controller.person.name = selectedEmployee.name
                 controller.person.lastName = selectedEmployee.lastname
                 controller.person.postion = selectedEmployee.position
+                controller.person.employeeId = selectedEmployee.id
                 controller.person.gender = selectedEmployee.gender
                 controller.person.dob = selectedEmployee.dob
+                controller.person.maritalStatus = selectedEmployee.maritalStatus
+                controller.person.socialSecurity = selectedEmployee.ssn
+                controller.person.dependents = selectedEmployee.dependents
+                controller.person.dept = selectedEmployee.dept
+                controller.person.organization_2 = selectedEmployee.organization_2
+                controller.person.start = selectedEmployee.start
+                controller.person.hoursWorked = selectedEmployee.hoursWorked
+                controller.person.salary = selectedEmployee.salary
                 
                 controller.didSelectAnotherUser = true
                 controller.slideViewWithData()
