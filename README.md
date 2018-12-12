@@ -12,22 +12,23 @@ The final output in the web app is generating a paycheck for the employee with a
 As part of a team of developers, using my skills in iOS development, I took the opportunity to create a lightweight mobile version of the web app to 
 facilitate in the paying of employees in an easy to use interface that allows HR staff to pay individual employees based on data fetched off the server (if employee was paid or not).
 
-The app was designed using Storyboards due to the time constraint of using a  programmatic approach. The app relies in a REST API written in PHP to talk to the database and fetch data off the server to then serve it via JSON objects. These JSON objects then are converted to notable swift objects which are then used on the UITableView.
-
-
-
+The app was designed using Storyboards due to the time constraint of using a  programmatic approach. The app relies in a REST API written in PHP to talk to the database and fetch data off the server to then serve it via JSON objects. This data is then  converted to notable swift objects that are used by the app serve the data shown below.
 
 
 <div align = "center">
 <img src="Screenshots/image1.png" width="700" /><br/>
 <span>Sample user to be paid</span>
-<br/>
+<br/><br/><br/>
 <img src="Screenshots/image2.png" width="700" /><br/>
 <span>Sample user paid</span>
 </div>
 
 
 
-## Item
+## App Details:
+OS: iOS 12.1
+Device used: iPad Air 2
+Languages: Swift 4, PHP, JSON
 
-#### Item
+#### Interface design and programming: Neftali Samarey Q. Morales (Neftali Samarey) ☺️
+
